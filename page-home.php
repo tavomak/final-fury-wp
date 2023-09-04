@@ -102,15 +102,14 @@
 
 <section class="container py-md-4 my-5">
   <div class="row align-items-center justify-content-between">
-    <div class="col-lg-6 order-last">
-      <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-3.png" alt="" />
-    </div>
-    <div class="col-lg-5 order-first">
+    <div class="col-lg-5 order-md-2">
       <h2 class="fs-4 fw-title-italic">Subscribe to our email newsletter</h2>
       <p>
         Don’t miss out on the latest Final Fury news.
       </p>
       <?php get_template_part('includes/form/sign-up'); ?>
+    </div>ç    <div class="col-lg-6 order-md-1">
+      <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-3.png" alt="" />
     </div>
   </div>
 </section>
