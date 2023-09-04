@@ -31,7 +31,7 @@ $(function () {
 	------------------------------------------------------------------
     */
    $(window).scroll(function () {
-        if ($(this).scrollTop() >= 90) {
+        if ($(this).scrollTop() >= 80) {
             $(".main-menu").addClass("active");
         } else {
             $(".main-menu").removeClass("active");
