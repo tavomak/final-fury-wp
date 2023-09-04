@@ -19,12 +19,12 @@
       <div class="col-lg-4 order-lg-1">
         <div class="px-lg-5">
           <ul class="d-flex">
-            <?php // if ($character['voice']): ?>
+            <?php if ($character['voice']): ?>
               <li class="text-uppercase">
                 Voice
                 <img src="<?php  echo bloginfo('template_directory');?>/assets/img/sound.svg" alt="<?php echo the_title();?> voice">
               </li>
-            <?php // endif; ?>
+            <?php endif; ?>
             <?php if ($character['theme']): ?>
               <li class="text-uppercase">
                 theme
@@ -32,18 +32,18 @@
               </li>
             <?php endif; ?>
           </ul>
-          <h1 class="fw-title-italic text-uppercase"><?php the_title();?></h1>
+          <h1 class="fw-title-italic text-uppercase" style="font-size: 64px;"><?php the_title();?></h1>
           <p><?php echo $character['short_description'];?></p>
         </div>
       </div>
 
       <div class="col-lg-4 order-lg-3">
-        <div class="px-lg-5">
-          <h2 class="text-uppercase">Archetype</h2>
+        <div class="px-lg-5 text-uppercase">
+          <h2>Archetype</h2>
           <p><?php echo $character['archetype'];?></p>
-          <h2 class="text-uppercase">Stats</h2>
+          <h2>Stats</h2>
           <ul>
-            <li>
+            <li class="mt-2">
               <p class="mb-0">Power</p>
               <ul class="d-flex stats-bar">
                 <?php for ($i = 1; $i <= 5; $i++) : ?>
@@ -57,7 +57,7 @@
                 <?php endfor; ?>
               </ul>
             </li>
-            <li>
+            <li class="mt-2">
               <p class="mb-0">Health</p>
               <ul class="d-flex stats-bar">
                 <?php for ($i = 1; $i <= 5; $i++) : ?>
@@ -71,7 +71,7 @@
                 <?php endfor; ?>
               </ul>
             </li>
-            <li>
+            <li class="mt-2">
               <p class="mb-0">Mobility</p>
               <ul class="d-flex stats-bar">
                 <?php for ($i = 1; $i <= 5; $i++) : ?>
@@ -85,7 +85,7 @@
                 <?php endfor; ?>
               </ul>
             </li>
-            <li>
+            <li class="mt-2">
               <p class="mb-0">Range</p>
               <ul class="d-flex stats-bar">
                 <?php for ($i = 1; $i <= 5; $i++) : ?>
@@ -109,16 +109,17 @@
 
 <section class="container move-list--container py-5">
   <div class="row align-items-center">
-    <div class="col-md-6">
-      <h2 class="fw-title-italic text-uppercase">Move List</h2>
+    <div class="col-md-6 order-md-2">
+      <h2 class="fw-title-italic text-uppercase d-md-none" style="font-size: 32px;">Move List</h2>
+      <img class="move-list--image w-100 mb-3" src="" alt="">
+    </div>
+    <div class="col-md-6 order-md-1">
+      <h2 class="fw-title-italic text-uppercase d-none d-md-block" style="font-size: 64px;">Move List</h2>
       <ul class="d-flex flex-wrap move-list--icons" style="max-width: 500px;"></ul>
       <ul class="move-list--text">
-          <li class="move-list--text-title"></li>
+          <li class="move-list--text-title text-uppercase"></li>
           <li class="move-list--text-text"></li>
       </ul>
-    </div>
-    <div class="col-md-6">
-      <img class="move-list--image w-100" src="" alt="">
     </div>
   </div>
 </section>
@@ -126,7 +127,7 @@
 <section class="container py-5">
   <div class="row align-items-center">
     <div class="col-md-6">
-      <img class="w-100" src="<?php echo $character['bio_image'];?>" alt="<?php echo the_title();?>">
+      <img class="w-100 mb-3" src="<?php echo $character['bio_image'];?>" alt="<?php echo the_title();?>">
     </div>
     <div class="col-md-6">
       <h2 class="fw-title-italic text-uppercase">Biography</h2>
