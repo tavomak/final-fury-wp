@@ -1,0 +1,27 @@
+$primary-font: 'Saira', sans-serif;
+$font-regular: 400;
+$font-bold: 600;
+$font-bold-italic: 700;
+
+// Colores
+$palette: (
+    light-red: #FD3A4C,
+    dark-red: #532136,
+    light-blue: #9696BB,
+    dark-blue: #2C2C49,
+    light-green: #3AFDDA,
+    light-purple: #5865F2,
+);
+$light-red: map-get($palette,light-red);
+$dark-red: map-get($palette,dark-red);
+$grey: map-get($palette,#626262);
+$light-blue: map-get($palette,light-blue);
+$dark-blue: map-get($palette,dark-blue);
+$light-green: map-get($palette,light-green);
+$light-purple: map-get($palette,light-purple);
+
+$white:white;
+$black: black;
+//Gradientes
+$primary-gradient: linear-gradient(90deg, $dark-blue, $light-green);
+$secondary-gradient: linear-gradient(90deg, $light-green, $dark-blue);

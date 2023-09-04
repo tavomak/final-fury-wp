@@ -1,0 +1,17 @@
+
+.video-overlay {
+  position: absolute;
+  padding-top: 50px;
+  @include MQ(M){
+    padding-top: auto;
+    @include center(x);
+    bottom: 15%;
+  }
+  &--content-img {
+    max-width:300px;
+    margin:0 auto;
+    @include MQ(M){
+      max-width:350px;
+    }
+  }
+}

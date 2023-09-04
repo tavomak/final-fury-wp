@@ -1,0 +1,69 @@
+
+
+%out {
+  padding: 2px 3px;
+  clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+  transition: .2s ease-in-out all;
+}
+
+%in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 38px;
+  clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+  font-weight: 700;
+  font-style: italic;
+  @include MQ(L) {
+    height: 28px;
+    min-width: 170px;
+  }
+}
+
+
+
+.octagon {
+  background: none;
+  outline: none;
+  border: none;
+  color: $white;
+  text-transform: uppercase;
+  &:hover {
+    color: $light-red;
+    .octagon--outer {
+      background-color: rgba($light-red, 1);
+    }
+    .octagon--inner {
+      background-color: $dark-red;
+    }
+    .octagon--outer-variant {
+      background-color: rgba($light-purple, 1);
+    }
+    .octagon--inner-variant {
+      background-color: $light-purple;
+    }
+  }
+
+  &--outer {
+    @extend %out;
+    background-color: $light-blue;
+  }
+  
+  &--inner {
+    @extend %in;
+    background-color: $dark-blue;
+  }
+  
+  &--outer-variant {
+    @extend %out;
+    background-color: $light-purple;
+    min-width: 170px
+  }
+  
+  &--inner-variant {
+    @extend %in;
+    background-color: darken($color: $light-purple, $amount: 10%);
+  }
+
+}

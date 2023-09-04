@@ -1,0 +1,83 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+* {
+  box-sizing: border-box;
+}
+html,body{
+  min-height: 100vh;
+  background: $black;
+  color: $white;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $primary-font;
+  color: $white;
+}
+
+a {
+  color: $white;
+  transition: .2s ease-in-out all;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: $light-red;
+  }
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+strong, .font-bold {
+  font-weight: $font-bold;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 460px);
+}
+
+@each $name, $color in $palette {
+  .bg-#{""+$name} {
+    background-color: $color !important; 
+  }
+  .text-#{""+$name} {
+    color: $color !important;
+  }
+}
+
+.bg-primary-gradient {
+  background: $primary-gradient;
+}
+
+.bg-secondary-gradient {
+  background: $secondary-gradient;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1.5rem rgb(98 52 130 / 20%) !important;
+}
+
+.bubble {
+  background: url('../img/bubble2.png'), url('../img/bubble.png');
+  background-position: left 200px, right bottom;
+  background-size: 400px;
+  background-repeat: no-repeat;
+  @include MQ(L) {
+    background-size: 800px;
+  }
+  @include MQ(XL) {
+    background-size: 1000px;
+  }
+}
+
+.fw-title-italic {
+  font-weight: $font-bold-italic;
+  font-style: italic;
+}

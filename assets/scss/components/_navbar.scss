@@ -1,0 +1,61 @@
+.header {
+    position: absolute;
+    width: 100%;
+    transition: all ease-in-out .2s;
+    z-index: 20;
+    &.active {
+        position: sticky;
+        top: 0;
+        @include MQ(L) {
+            background: rgba($color: $dark-blue, $alpha: .2);
+            box-shadow: inset 0 -1px 0 0 rgba(0,0,0,.1);
+            backdrop-filter: saturate(180%) blur(5px)
+        }
+    }
+    &.open {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba($color: $dark-blue, $alpha: .7);
+        box-shadow: inset 0 -1px 0 0 rgba(0,0,0,.1);
+        backdrop-filter: saturate(180%) blur(5px);
+        @include MQ(L) {
+            width: 100%;
+            height: auto;
+        }
+        & .navbar-nav {
+            position: relative;
+            left: -80px;
+            height: 80vh;
+            padding-top: 40px;
+            @include MQ(L) {
+                height: auto;
+                padding-top: 0;
+                left: 0;
+            }
+        }
+        & .navbar-item {
+            margin-bottom: 40px;
+            @include MQ(L) {
+                margin-bottom: auto;
+            }
+        }
+    }
+}
+
+.underline {
+    border-bottom: 1px solid $grey;
+}
+
+.mobile-menu-icon {
+    background: url('../img/menu-icon-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    .hamburger {
+        position: absolute;
+        @include center(x);
+    }
+}

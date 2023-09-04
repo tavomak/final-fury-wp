@@ -1,0 +1,88 @@
+.parallelogram {
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  position: relative;
+  text-align: left;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &::after, &::before {
+    display: block;
+    position: relative;
+  }
+  &::before {
+    content: url('../img/box-top.svg');
+    top: 7px;
+    z-index: 1;
+  }
+  &::after {
+    content: url('../img/box-bottom.svg');
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &--variant {
+    &::before {
+      content: url('../img/box-variant-top.svg');
+      top: 7px;
+      z-index: 1;
+    }
+    &::after {
+      content: url('../img/box-variant-bottom.svg');
+      top: 0;
+      z-index: 1;
+    }
+  }
+  &--title {
+    padding-left: 20px;
+    position: relative;
+    &::before {
+      content: '';
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 12px solid $light-red;
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+  }
+  
+  &--content {
+    background: $dark-blue;
+    padding: 20px 50px;
+    position: relative;
+    z-index: 3;
+    min-height: 50%;
+    border-left: 1px solid $light-blue;
+    border-right: 1px solid $light-blue;
+  
+    @include MQ(S) {
+      border-left: 2px solid $light-blue;
+      border-right: 2px solid $light-blue;
+    }
+    @include MQ(M) {
+      border-left: 1px solid $light-blue;
+      border-right: 1px solid $light-blue;
+    }
+    @include MQ(L) {
+      border-left: 1.5px solid $light-blue;
+      border-right: 1.5px solid $light-blue;
+    }
+    @include MQ(XL) {
+      border-left: 2px solid $light-blue;
+      border-right: 2px solid $light-blue;
+    }
+  }
+  
+  &--text-open {
+    height: auto;
+  }
+  
+  &--text-close {
+    overflow: hidden;
+    height: 0;
+  }
+}

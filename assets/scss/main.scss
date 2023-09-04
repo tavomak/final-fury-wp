@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+//@import "bourbon";
+@import "base/typography";
+@import "utils/variables";
+@import "utils/media";
+@import "utils/mixins";
+
+@import "base/reset";
+@import "base/global";
+
+@import "components/loader";
+@import "components/video";
+@import "components/hamburguer";
+@import "components/navbar";
+@import "components/footer";
+@import "components/parallelogram";
+@import "components/octagon";
+@import "components/input";
+@import "components/fighter-card";

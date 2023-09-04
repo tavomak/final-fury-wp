@@ -1,0 +1,47 @@
+.btn {
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: none;
+    font-size: 12px;
+    &-primary{
+        background: $black;
+        color: $white;
+        &:hover {
+            background: $brand-secondary-color;
+        }
+    }
+    &-secondary{
+        background: $brand-secondary-color;
+        //border-radius: 5px;
+        color: $white;
+        &:hover {
+            color: $dark-grey !important;
+            background: $ligth-grey;
+        }
+    }
+}
+.car-icon{
+    position: fixed;
+    z-index: 10;
+    right: 20px;
+    & .cart-count{
+        content: attr(data-before);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        background: $brand-secondary-color;
+        color: white;
+        position: absolute;
+        top: 0;
+        margin-left: 50px;
+        border-radius: 50%;
+    }
+    &--img{
+        max-width: 75px;
+    }
+    &.empty .cart-count{
+        display: none;
+    }
+}

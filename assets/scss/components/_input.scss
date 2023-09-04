@@ -1,0 +1,39 @@
+.parallel--input {
+  background: $black !important;
+  border-radius: 0 !important;
+  color: $white !important;
+  height: 40px;
+  &::placeholder {
+    color: $white !important;
+  }
+  &:focus {
+    border-color: $white !important;
+    outline: 0;
+    box-shadow: 0 0 60px 0.25rem rgba($light-red, 0.8) !important;
+  }
+  @include MQ(L) {
+    min-width: 300px;
+  }
+}
+.parallel--label {
+  position: relative;
+  &::after, &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+  &::before {
+    content: url('../img/box-left.svg');
+    left: -15px;
+    z-index: 1;
+    height: 30px;
+    width: 16.5px;
+  }
+  &::after {
+    content: url('../img/box-right.svg');
+    right: -15px;
+    z-index: 1;
+    height: 30px;
+    width: 16px;
+  }
+}

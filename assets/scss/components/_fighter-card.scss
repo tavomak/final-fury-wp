@@ -1,0 +1,26 @@
+.fighter-card {
+  // border: 1px solid $light-blue;
+  overflow: visible;
+  @include MQ(L) {
+    flex: 0 0 33.33%;
+    max-width: 33%;
+  }
+
+  &--img {
+    object-fit:cover;
+    object-position: center; 
+    height:400px;
+    width: 110%;
+    &-on {
+      position: absolute;
+      opacity: 0;
+      transition: .2s ease-in-out all;
+    }
+  }
+  &:hover {
+    .fighter-card--img-on {
+      opacity: 1;
+    }
+    // background: blue
+  }
+}
