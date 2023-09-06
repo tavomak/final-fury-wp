@@ -104,6 +104,14 @@ strong, .font-bold {
   color: #9696BB !important;
 }
 
+.bg-medium-blue {
+  background-color: #5E5E74 !important;
+}
+
+.text-medium-blue {
+  color: #5E5E74 !important;
+}
+
 .bg-dark-blue {
   background-color: #2C2C49 !important;
 }
@@ -433,7 +441,7 @@ strong, .font-bold {
   background-size: contain;
   background-repeat: no-repeat;
   width: 64px;
-  height: 64px;
+  height: 42px;
   position: relative;
 }
 .mobile-menu-icon .hamburger {
@@ -538,6 +546,10 @@ strong, .font-bold {
   height: 0;
 }
 
+.parallel--label {
+  width: 100%;
+}
+
 .octagon--outer-variant, .octagon--outer {
   padding: 2px 3px;
   -webkit-clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
@@ -565,7 +577,7 @@ strong, .font-bold {
 }
 @media screen and (min-width: 992px) {
   .octagon--inner-variant, .octagon--inner {
-    height: 28px;
+    height: 34px;
     min-width: 170px;
   }
 }
@@ -604,6 +616,33 @@ strong, .font-bold {
 }
 .octagon--inner-variant {
   background-color: #2939ee;
+}
+
+.parallel--text-area {
+  background: black !important;
+  border-radius: 0 !important;
+  color: white !important;
+}
+.parallel--text-area::-webkit-input-placeholder {
+  color: white !important;
+}
+.parallel--text-area::-moz-placeholder {
+  color: white !important;
+}
+.parallel--text-area:-ms-input-placeholder {
+  color: white !important;
+}
+.parallel--text-area::-ms-input-placeholder {
+  color: white !important;
+}
+.parallel--text-area::placeholder {
+  color: white !important;
+}
+.parallel--text-area:focus {
+  border-color: white !important;
+  outline: 0;
+  -webkit-box-shadow: 0 0 60px 0.25rem rgba(253, 58, 76, 0.8) !important;
+          box-shadow: 0 0 60px 0.25rem rgba(253, 58, 76, 0.8) !important;
 }
 
 .parallel--input {
@@ -668,6 +707,7 @@ strong, .font-bold {
 @media screen and (min-width: 992px) {
   .fighter-card {
     max-width: 25%;
+    left: -40px;
   }
 }
 .fighter-card--img {
@@ -676,6 +716,12 @@ strong, .font-bold {
   -o-object-position: center;
      object-position: center;
   height: 400px;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .fighter-card--img {
+    width: auto;
+  }
 }
 .fighter-card--img-on {
   position: absolute;
@@ -685,5 +731,12 @@ strong, .font-bold {
 }
 .fighter-card:hover .fighter-card--img-on {
   opacity: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .single .fighter-card {
+    max-width: 30%;
+    left: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

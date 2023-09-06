@@ -3,12 +3,17 @@
   overflow: visible;
   @include MQ(L) {
     max-width: 25%;
+    left: -40px;
   }
 
   &--img {
     object-fit:cover;
     object-position: center; 
     height:400px;
+    width: 100%;
+    @include MQ(L) {
+      width: auto;
+    }
     &-on {
       position: absolute;
       opacity: 0;
@@ -19,5 +24,12 @@
     .fighter-card--img-on {
       opacity: 1;
     }
+  }
+}
+
+.single .fighter-card {
+  @include MQ(L) {
+    max-width: 30%;
+    left: 0;
   }
 }

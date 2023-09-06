@@ -8,6 +8,7 @@ $palette: (
     light-red: #FD3A4C,
     dark-red: #532136,
     light-blue: #9696BB,
+    medium-blue: #5E5E74,
     dark-blue: #2C2C49,
     light-green: #3AFDDA,
     light-purple: #5865F2,
@@ -16,6 +17,7 @@ $light-red: map-get($palette,light-red);
 $dark-red: map-get($palette,dark-red);
 $grey: map-get($palette,#626262);
 $light-blue: map-get($palette,light-blue);
+$medium-blue: map-get($palette,medium-blue);
 $dark-blue: map-get($palette,dark-blue);
 $light-green: map-get($palette,light-green);
 $light-purple: map-get($palette,light-purple);

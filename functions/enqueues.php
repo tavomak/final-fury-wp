@@ -78,6 +78,9 @@ if ( ! function_exists('bk_enqueues') ) {
 		wp_register_script('sbjs', get_template_directory_uri() . '/assets/js/sourcebuster.min.js', false, null, true);
 		wp_enqueue_script('sbjs');
 
+		wp_register_script('youtube-js', 'https:///www.youtube.com/player_api', false, null, true);
+		wp_enqueue_script('youtube-js');
+		
 		wp_register_script('main', get_template_directory_uri() . '/assets/js/main-dist.js', false, null, true);
 
 		$data = array();

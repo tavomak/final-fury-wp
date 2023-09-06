@@ -108,18 +108,19 @@
         Don’t miss out on the latest Final Fury news.
       </p>
       <?php get_template_part('includes/form/sign-up'); ?>
-    </div>ç    <div class="col-lg-6 order-md-1">
+    </div>
+    <div class="col-lg-6 order-md-1">
       <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-3.png" alt="" />
     </div>
   </div>
 </section>
 
-<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="kit-modalLabel" aria-hidden="true">
+<div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="video-modalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content">
             <div class="d-flex w-100 p-2 justify-content-end bg-light-blue">
                 <div class="mobile-menu-icon">
-                <button class="hamburger hamburger--squeeze is-active" type="button" data-dismiss="modal" aria-label="Close">
+                <button class="hamburger hamburger--squeeze is-active" type="button" data-bs-dismiss="modal" aria-label="Close">
                   <span class="hamburger-box">
                     <span class="hamburger-inner" ></span>
                   </span>
@@ -133,7 +134,7 @@
                       <div class="wp-block-embed__wrapper">
                           <iframe
                               id="iframe-<?php echo get_row_index(); ?>"
-                              class="<?php echo (is_numeric($video)) ? 'vimeo' : 'youtube' ;?>"
+                              class="<?php echo (is_numeric($video)) ? 'vimeo' : 'youtube' ;?> youtubeVideo"
                               title="Embed video Flora"
                               width="500"
                               src="<?php echo (is_numeric($video)) ? 'https://player.vimeo.com/video/'.$video.'?title=&portrait=0autoplay=1' : 'https://www.youtube.com/embed/'.$video.'?feature=oembed&enablejsapi=1&enablejsapi=1' ;?>"
@@ -141,7 +142,6 @@
                               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                               allowfullscreen="">
                           </iframe>
-                          <div class="p4 videoStart" data-id="video-<?php echo get_row_index();?>" style="background:rgb(0,0,0,0);position:absolute;width:100%;height:100%;top:0;z-index:10"></div>
                       </div>
                   </figure>
               </div>
@@ -149,8 +149,6 @@
         </div>
     </div>
 </div>
-
-<script src="https:///www.youtube.com/player_api"></script>"
 
 <?php 
     bk_main_after();

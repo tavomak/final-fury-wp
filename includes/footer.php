@@ -85,12 +85,12 @@ $socialMedia = array(
     </section>
 </footer>
 
-<div class="modal fade" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="kit-modalLabel" aria-hidden="true">
+<div class="modal fade" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="contact-form-modalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-        <div class="modal-content bg-light-blue">
+        <div class="modal-content bg-medium-blue">
             <div class="d-flex w-100 p-2 justify-content-end">
                 <div class="mobile-menu-icon">
-                    <button class="hamburger hamburger--squeeze is-active" type="button" data-dismiss="modal" aria-label="Close">
+                    <button class="hamburger hamburger--squeeze is-active" type="button" data-bs-dismiss="modal" aria-label="Close">
                     <span class="hamburger-box">
                         <span class="hamburger-inner" ></span>
                     </span>
@@ -148,19 +148,29 @@ $socialMedia = array(
                                         </label>
                                     </div>
                                     <div class="form-group w-100 px-4 mb-4">
-                                        <label class="parallel--label" for="inputPhone">
+                                        <label class="parallel--label" for="inputTopic">
                                             <input
                                                 type="text"
                                                 class="form-control parallel--input"
-                                                id="inputPhone"
-                                                name="inputPhone"
-                                                placeholder="PHONE NUMBER"
+                                                id="inputTopic"
+                                                name="inputTopic"
+                                                placeholder="TOPIC"
                                                 required
                                             >
                                         </label>
                                     </div>
+                                    <div class="form-group w-100 px-4 mb-4">
+                                        <textarea
+                                            type="text"
+                                            class="form-control parallel--text-area"
+                                            id="inputTextArea"
+                                            name="inputTextArea"
+                                            placeholder="TELL US MORE."
+                                            required
+                                        ></textarea>
+                                    </div>
                                     <div class="form-group w-100">
-                                        <div class="text-center py-4">
+                                        <div class="py-4">
                                             <div class="ps-4">
                                                 <button
                                                 type="submit"

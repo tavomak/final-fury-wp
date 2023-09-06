@@ -1,3 +1,16 @@
+.parallel--text-area{
+  background: $black !important;
+  border-radius: 0 !important;
+  color: $white !important;
+  &::placeholder {
+    color: $white !important;
+  }
+  &:focus {
+    border-color: $white !important;
+    outline: 0;
+    box-shadow: 0 0 60px 0.25rem rgba($light-red, 0.8) !important;
+  }
+}
 .parallel--input {
   background: $black !important;
   border-radius: 0 !important;

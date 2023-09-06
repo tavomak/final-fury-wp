@@ -60,6 +60,12 @@ $(function () {
         $('#video-modal').modal('show')
     });
 
+    $('#video-modal').on('hidden.bs.modal', function (event) {
+        $('.youtubeVideo').each(function(){
+            this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+          });
+    });
+
     /* 
 	------------------------------------------------------------------
 		Parallelogram

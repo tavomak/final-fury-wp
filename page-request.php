@@ -58,25 +58,47 @@
                                 class="form-control parallel--input"
                                 id="inputEmail"
                                 name="inputEmail"
-                                placeholder="EMAIL"
+                                placeholder="YOUR EMAIL"
                                 required
                             >
                         </label>
                     </div>
                     <div class="form-group w-100 px-4 mb-4">
-                        <label class="parallel--label" for="inputPhone">
+                        <label class="parallel--label" for="inputPlatform">
                             <input
                                 type="text"
                                 class="form-control parallel--input"
-                                id="inputPhone"
-                                name="inputPhone"
-                                placeholder="PHONE NUMBER"
+                                id="inputPlatform"
+                                name="inputPlatform"
+                                placeholder="PLATFORM"
                                 required
                             >
                         </label>
                     </div>
+                    <div class="form-group w-100 px-4 mb-4">
+                        <label class="parallel--label" for="inputPlatform">
+                            <input
+                                type="text"
+                                class="form-control parallel--input"
+                                id="inputPlatform"
+                                name="inputPlatform"
+                                placeholder="WEBSITE / CHANNEL URL"
+                                required
+                            >
+                        </label>
+                    </div>
+                    <div class="form-group w-100 px-4 mb-4">
+                        <textarea
+                            type="text"
+                            class="form-control parallel--text-area"
+                            id="inputTextArea"
+                            name="inputTextArea"
+                            placeholder="TELL US MORE."
+                            required
+                        ></textarea>
+                    </div>
                     <div class="form-group w-100">
-                        <div class="text-center py-4">
+                        <div class="py-4">
                             <div class="ps-4">
                                 <button
                                 type="submit"
