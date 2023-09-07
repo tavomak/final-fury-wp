@@ -39,9 +39,9 @@
 
       <div class="col-lg-4 order-lg-3">
         <div class="px-lg-5 text-uppercase">
-          <h2>Archetype</h2>
+          <h2 class="fw-bold">Archetype</h2>
           <p><?php echo $character['archetype'];?></p>
-          <h2>Stats</h2>
+          <h2 class="fw-bold">Stats</h2>
           <ul>
             <li class="mt-2">
               <p class="mb-0">Power</p>
@@ -118,7 +118,7 @@
       <ul class="d-flex flex-wrap move-list--icons" style="max-width: 500px;"></ul>
       <ul class="move-list--text">
           <li class="move-list--text-title text-uppercase"></li>
-          <li class="move-list--text-text"></li>
+          <li class="move-list--text-description"></li>
       </ul>
     </div>
   </div>
@@ -130,7 +130,7 @@
       <img class="w-100 mb-3" src="<?php echo $character['bio_image'];?>" alt="<?php echo the_title();?>">
     </div>
     <div class="col-md-6">
-      <h2 class="fw-title-italic text-uppercase">Biography</h2>
+      <h2 class="fw-title-italic text-uppercase" style="font-size: 64px;">Biography</h2>
       <p><?php the_content();?></p>
     </div>
   </div>
