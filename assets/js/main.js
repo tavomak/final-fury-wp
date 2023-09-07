@@ -127,29 +127,9 @@ $(function () {
 	------------------------------------------------------------------
     */
 
-    var nombreProyecto = $('.nombreProyecto').text(),
-        logoProyecto = $('.logoProyecto').attr('src'),
-        textoProyecto = $('.textoProyecto').text(),
-        imagenDestacadaUno = $('.detallesImg').attr('src'),
-        imagenDestacadaDos = $('.imagenDestacada0').attr('src'),
-        imagenDestacadaTres = $('.imagenDestacada1').attr('src'),
-        direccionSv = $('.direccionSv').text(),
-        comuna = $('.comuna').text(),
-        telefonoSv = $('.telefonoSv').text(),
-        emailSv = $('.emailSv ').text(),
-        sbjMedio = sbjs.get.current.mdm,
+    var sbjMedio = sbjs.get.current.mdm,
         sbjFuente = sbjs.get.current.src;
 
-    $('#nombreProyecto').val(nombreProyecto);
-    $('#logoProyecto').val(logoProyecto);
-    $('#textoProyecto').val(textoProyecto);
-    $('#imagenDestacadaUno').val(imagenDestacadaUno);
-    $('#imagenDestacadaDos').val(imagenDestacadaDos);
-    $('#imagenDestacadaTres').val(imagenDestacadaTres);
-    $('#direccionSv').val(direccionSv);
-    $('#comuna').val(comuna);
-    $('#telefonoSv').val(telefonoSv);
-    $('#emailSv').val(emailSv);
     $('#fuenteSbj').val(sbjFuente);
     $('#medioSbj').val(sbjMedio);
 
@@ -161,29 +141,42 @@ $(function () {
 
     $(".wpcf7").on('wpcf7:mailsent', function (event) {
         $('#contacto-form-modal').modal('hide');
-        Swal.fire({
-            icon: 'success',
-            title: 'Se a enviado correctamente tu mensaje',
-            text: 'Pronto nos estaremos comunicando'
-        })
+        Toastify({
+            text: "Success",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
 
     });
 
-    $(".wpcf7").on('wpcf7:mailfailed', function (event) {
-        console.log("Email Failed")
-        console.log(event)
-        Swal.fire({
-            icon: 'error',
-            title: 'Ha ocurrido un error',
-            text: '"Por favot intentalo de nuevo más tarde"'
-        })
+    $(".wpcf7").on('wpcf7mailfailed', function (event) {
+        console.log("Failed");
+        Toastify({
+            text: "Success",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "linear-gradient(to right, #ff5f6d, #ffc371)",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
     });
 
     $(".wpcf7").on('wpcf7invalid', function () {
-        console.log("invalid")
+        console.log("invalid");
     });
 
     $(".wpcf7").on('wpcf7submit', function () {
-        console.log("wpcf7submit")
+        console.log("wpcf7submit");
     });
 });

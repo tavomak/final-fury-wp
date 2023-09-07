@@ -34,6 +34,9 @@ if ( ! function_exists('bk_enqueues') ) {
 		wp_register_style('fontawesome5', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', false, '6.4.2', null);
 		wp_enqueue_style('fontawesome5');
 
+		wp_register_style('toastify', 'https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css', false, '6.4.2', null);
+		wp_enqueue_style('toastify');
+
 		foreach ($dirJS as $file) {
 
 			if (pathinfo($file, PATHINFO_EXTENSION) === 'css') {
@@ -55,8 +58,8 @@ if ( ! function_exists('bk_enqueues') ) {
 		
 		// Scripts
 		
-		wp_register_script('sweetalert', 'https://cdn.jsdelivr.net/npm/sweetalert2@9', false, '2.8.3', true);
-		wp_enqueue_script('sweetalert');
+		wp_register_script('toastify', 'https://cdn.jsdelivr.net/npm/toastify-js', false, '2.8.3', true);
+		wp_enqueue_script('toastify');
 		
 		wp_register_script('bootstrap-bundle', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js', false, '5.3.1', true);
 		wp_enqueue_script('bootstrap-bundle');
