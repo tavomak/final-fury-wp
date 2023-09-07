@@ -22,8 +22,8 @@
 </section>
 
 <section class="container">
-    <div class="row">
-        <div class="col-md-6">
+    <div class="row justify-content-between">
+        <div class="col-md-5">
             <h2 class="fw-title-italic">WELCOME, CHAMPION!</h2>
             <p>Thank you for your interest in playing Final Fury. Please tell us more about you and we will be in touch shortly.</p>
             <img class="w-100 d-none d-md-block" src="<?php echo bloginfo('template_directory');?>/assets/img/request-img.png" alt="https://klugeinteractive.com/" />

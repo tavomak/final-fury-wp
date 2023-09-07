@@ -17,7 +17,7 @@
                         <input
                           type="email"
                           class="form-control parallel--input"
-                          placeholder="Your email address"
+                          placeholder="YOUR EMAIL ADDRESS"
                         />
                       </label>
                     </div>

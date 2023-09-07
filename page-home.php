@@ -37,7 +37,7 @@
 </section>
 
 <section class="container py-4 my-5">
-  <div class="row align-items-center justify-content-between">
+  <div class="row align-items-center justify-content-center">
     <div class="col-lg-5">
       <h1 class="fs-4 fw-title-italic">Sign up for our Closed Beta on Quest 2</h1>
       <p>
@@ -45,7 +45,7 @@
       </p>
       <?php get_template_part('includes/form/sign-up'); ?>
     </div>
-    <div class="col-lg-6 d-none d-lg-block">
+    <div class="col-lg-5 d-none d-lg-block">
       <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-1.png" alt="" />
     </div>
   </div>
@@ -101,7 +101,7 @@
 </section>
 
 <section class="container py-md-4 my-5">
-  <div class="row align-items-center justify-content-between">
+  <div class="row align-items-center justify-content-center">
     <div class="col-lg-5 order-md-2">
       <h2 class="fs-4 fw-title-italic">Subscribe to our email newsletter</h2>
       <p>
@@ -109,7 +109,7 @@
       </p>
       <?php get_template_part('includes/form/sign-up'); ?>
     </div>
-    <div class="col-lg-6 order-md-1">
+    <div class="col-lg-5 order-md-1">
       <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-3.png" alt="" />
     </div>
   </div>

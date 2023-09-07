@@ -503,7 +503,7 @@ strong, .font-bold {
   border-left: 12px solid #FD3A4C;
   position: absolute;
   left: 0;
-  top: -2px;
+  top: 2px;
 }
 .parallelogram--content {
   background: #2C2C49;
