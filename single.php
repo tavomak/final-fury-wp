@@ -117,7 +117,7 @@
       <h2 class="fw-title-italic text-uppercase d-none d-md-block" style="font-size: 64px;">Move List</h2>
       <ul class="d-flex flex-wrap move-list--icons" style="max-width: 500px;"></ul>
       <ul class="move-list--text">
-          <li class="move-list--text-title text-uppercase"></li>
+          <li class="move-list--text-title text-uppercase fs-3"></li>
           <li class="move-list--text-description"></li>
       </ul>
     </div>
