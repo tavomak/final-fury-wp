@@ -31,7 +31,7 @@ if ( ! function_exists('bk_enqueues') ) {
 		wp_register_style('bootstrap', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css', false, '5.3.1', null);
 		wp_enqueue_style('bootstrap');
 
-		wp_register_style('fontawesome5', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css', false, '5.15.3', null);
+		wp_register_style('fontawesome5', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', false, '6.4.2', null);
 		wp_enqueue_style('fontawesome5');
 
 		foreach ($dirJS as $file) {

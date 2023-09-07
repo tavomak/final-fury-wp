@@ -74,8 +74,10 @@ $(function () {
 
     $('.parallelogram').on('click', function (e) {
         e.preventDefault();
+        $('.parallelogram').removeClass('parallelogram--active');
         $('.parallelogram--text').addClass('parallelogram--text-close');
         $(this).find('.parallelogram--text').removeClass('parallelogram--text-close');
+        $(this).addClass('parallelogram--active');
     })
 
     /* 

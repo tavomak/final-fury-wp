@@ -71,8 +71,13 @@
           rel="noreferrer"
         >
           <div class="octagon--outer-variant">
-            <span class="octagon--inner-variant">
-            Join to discord
+            <span class="octagon--inner-variant px-lg-5">
+              <div class="px-5">
+                <i class="fab fa-discord me-2"></i>
+                <span>
+                  Join to discord
+                </span>
+              </div>
             </span>
           </div>
         </a>

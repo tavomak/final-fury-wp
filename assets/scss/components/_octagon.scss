@@ -13,8 +13,6 @@
   min-width: 120px;
   height: 38px;
   clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
-  font-weight: 700;
-  font-style: italic;
   @include MQ(L) {
     height: 34px;
     min-width: 170px;
@@ -30,11 +28,11 @@
   color: $white;
   text-transform: uppercase;
   &:hover {
-    color: $light-red;
     .octagon--outer {
       background-color: rgba($light-red, 1);
     }
     .octagon--inner {
+      color: $light-red;
       background-color: $dark-red;
     }
     .octagon--outer-variant {
@@ -42,6 +40,7 @@
     }
     .octagon--inner-variant {
       background-color: $light-purple;
+      font-weight: 900;
     }
   }
 
@@ -52,6 +51,8 @@
   
   &--inner {
     @extend %in;
+    font-weight: 700;
+    font-style: italic;
     background-color: $dark-blue;
   }
   
@@ -63,7 +64,7 @@
   
   &--inner-variant {
     @extend %in;
-    background-color: darken($color: $light-purple, $amount: 10%);
+    background-color: $light-purple;
   }
 
 }

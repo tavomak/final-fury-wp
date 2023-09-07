@@ -581,8 +581,6 @@ strong, .font-bold {
   height: 38px;
   -webkit-clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
           clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
-  font-weight: 700;
-  font-style: italic;
 }
 @media screen and (min-width: 992px) {
   .octagon--inner-variant, .octagon--inner {
@@ -598,13 +596,11 @@ strong, .font-bold {
   color: white;
   text-transform: uppercase;
 }
-.octagon:hover {
-  color: #FD3A4C;
-}
 .octagon:hover .octagon--outer {
   background-color: #fd3a4c;
 }
 .octagon:hover .octagon--inner {
+  color: #FD3A4C;
   background-color: #532136;
 }
 .octagon:hover .octagon--outer-variant {
@@ -612,11 +608,14 @@ strong, .font-bold {
 }
 .octagon:hover .octagon--inner-variant {
   background-color: #5865F2;
+  font-weight: 900;
 }
 .octagon--outer {
   background-color: #9696BB;
 }
 .octagon--inner {
+  font-weight: 700;
+  font-style: italic;
   background-color: #2C2C49;
 }
 .octagon--outer-variant {
@@ -624,7 +623,7 @@ strong, .font-bold {
   min-width: 170px;
 }
 .octagon--inner-variant {
-  background-color: #2939ee;
+  background-color: #5865F2;
 }
 
 .parallel--text-area {
