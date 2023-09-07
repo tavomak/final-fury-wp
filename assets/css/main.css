@@ -173,6 +173,15 @@ strong, .font-bold {
   font-style: italic;
 }
 
+.ft-title {
+  font-size: 32px;
+}
+@media screen and (min-width: 992px) {
+  .ft-title {
+    font-size: 64px;
+  }
+}
+
 .cd-loader {
   position: fixed;
   left: 0;

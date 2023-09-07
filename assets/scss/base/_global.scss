@@ -81,3 +81,10 @@ strong, .font-bold {
   font-weight: $font-bold-italic;
   font-style: italic;
 }
+
+.ft-title {
+  font-size: 32px;
+  @include MQ(L) {
+    font-size: 64px;
+  }
+}

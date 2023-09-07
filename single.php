@@ -110,11 +110,11 @@
 <section class="container move-list--container py-5">
   <div class="row align-items-center">
     <div class="col-md-6 order-md-2">
-      <h2 class="fw-title-italic text-uppercase d-md-none" style="font-size: 32px;">Move List</h2>
+      <h2 class="fw-title-italic text-uppercase d-md-none">Move List</h2>
       <img class="move-list--image w-100 mb-3" src="" alt="">
     </div>
     <div class="col-md-6 order-md-1">
-      <h2 class="fw-title-italic text-uppercase d-none d-md-block" style="font-size: 64px;">Move List</h2>
+      <h2 class="fw-title-italic ft-title text-uppercase d-none d-md-block">Move List</h2>
       <ul class="d-flex flex-wrap move-list--icons" style="max-width: 500px;"></ul>
       <ul class="move-list--text">
           <li class="move-list--text-title text-uppercase fs-3"></li>
@@ -130,7 +130,7 @@
       <img class="w-100 mb-3" src="<?php echo $character['bio_image'];?>" alt="<?php echo the_title();?>">
     </div>
     <div class="col-md-6">
-      <h2 class="fw-title-italic text-uppercase" style="font-size: 64px;">Biography</h2>
+      <h2 class="fw-title-italic ft-title text-uppercase">Biography</h2>
       <p><?php the_content();?></p>
     </div>
   </div>
