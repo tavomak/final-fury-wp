@@ -96,18 +96,27 @@ if ( ! function_exists('bk_enqueues') ) {
 				$count = 0;
 				while( have_rows('move_list') ) : the_row();
 				$image = get_sub_field('image');
-				$video = get_sub_field('video');
-				$icon = get_sub_field('icon');
+				$video_source = get_sub_field('video_source');
+				$video_file = get_sub_field('video_file');
+				$video_id = get_sub_field('youtube_video_id');
+				$icon_type = get_sub_field('icon');
+				$icon_title = get_sub_field('icon_title');
+				$move_icon_on = get_sub_field('move_icon_on');
+				$move_icon_off = get_sub_field('move_icon_off');
 				$description = get_sub_field('description');
-				$name = get_sub_field('name');
 				$count++;
 				array_push( 
 					$move_list, array(
-						"name" => $icon['value'] ? $icon['value'] : $name,
+						"name" => $icon_type['value'] ? $icon_type['label'] : $icon_title,
 						"active" => $count === 1,
 						"image" => $image,
-						"video" => $video,
-						"icon" => $icon,
+						"video_source" => $video_source,
+						"video_file" => $video_file,
+						"video_id" => $video_id,
+						"icon_type" => $icon_type['value'],
+						"icon_title" => $icon_title,
+						"move_icon_on" => $move_icon_on,
+						"move_icon_off" => $move_icon_off,
 						"description" => $description,
 					) 
 				);

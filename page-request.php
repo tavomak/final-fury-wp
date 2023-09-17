@@ -65,14 +65,12 @@
                     </div>
                     <div class="form-group w-100 px-4 mb-4">
                         <label class="parallel--label" for="inputPlatform">
-                            <input
-                                type="text"
-                                class="form-control parallel--input"
-                                id="inputPlatform"
-                                name="inputPlatform"
-                                placeholder="PLATFORM"
-                                required
-                            >
+                            <select class="form-select parallel--input" aria-label="Select Platform">
+                                <option selected>SELECT PLATFORM</option>
+                                <option value="meta-quest">META QUEST</option>
+                                <option value="sSteam-vr">STEAM VR</option>
+                                <option value="playStation-vr-2">PLAYSTATION VR 2</option>
+                            </select>
                         </label>
                     </div>
                     <div class="form-group w-100 px-4 mb-4">

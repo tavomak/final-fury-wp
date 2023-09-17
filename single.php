@@ -7,8 +7,8 @@
 ?>
 <section
   class="container-fluid px-0 py-5"
-  style="background: url(<?php echo bloginfo('template_directory');?>/assets/img/fighter-bg.png); background-size: cover;"
->
+  style="background: url(<?php echo bloginfo('template_directory');?>/assets/img/fighter-bg.png) no-repeat; background-size: contain;"
+  >
   <div class="container pt-5">
     <div class="row justify-content-center align-items-center">
 
@@ -111,7 +111,26 @@
   <div class="row align-items-center">
     <div class="col-md-6 order-md-2">
       <h2 class="fw-title-italic text-uppercase d-md-none">Move List</h2>
-      <img class="move-list--image w-100 mb-3" src="" alt="">
+      <img class="move-list--image w-100" src="" alt="">
+      <div class="video-wrapper mb-3">
+          <figure
+              class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio m-0">
+              <div class="wp-block-embed__wrapper">
+                  <iframe
+                      id="iframe-<?php echo get_row_index(); ?>"
+                      class="move-list--video youtubeVideo"
+                      title="Embed video <?php echo the_title();?>"
+                      width="500"
+                      src=""
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen=""
+                      poster=""
+                  >
+                  </iframe>
+              </div>
+          </figure>
+      </div>
     </div>
     <div class="col-md-6 order-md-1">
       <h2 class="fw-title-italic ft-title text-uppercase d-none d-md-block">Move List</h2>

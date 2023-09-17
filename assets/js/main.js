@@ -91,18 +91,28 @@ $(function () {
         console.log({ moveList });
         const createMoveList = ({ listOfItems: list }) => {
             $.each(list, function (key, value) {
+                let activeUrl;
+                let iconUrl;
+                if (value.video_id) {
+                    activeUrl = 'https://www.youtube.com/embed/'+ value.video_id +'?feature=oembed&enablejsapi=1&enablejsapi=1&autoplay=1';
+                } else {
+                    activeUrl = value?.video_file;
+                }
                 if (value.active) {
-                    $('.move-list--image').attr({
-                        'src': value.image,
-                        'alt': value.icon.label
+                    iconUrl = value.move_icon_on || `${themeUri}icon-${value.icon_type}-active.png`;
+                    $('.move-list--video').attr({
+                        'poster': value.image,
+                        'src': activeUrl
                     });
-                    $('.move-list--text-title').text(value.icon.label);
+                    $('.move-list--text-title').text(value.name);
                     $('.move-list--text-description').text(value.description);
+                } else {
+                    iconUrl = value.move_icon_off || `${themeUri}icon-${value.icon_type}.png`;
                 }
                 $('.move-list--icons').append(`
                 <li class="px-2" style="width: 20%">
-                    <a href="#" class="move-list--icon-link" data-name="${value.icon.value}">
-                        <img class="w-100" src="${themeUri}icon-${value.icon.value}${value.active ? '-active' : ''}.png" alt="${value.icon.label}">
+                    <a href="#" class="move-list--icon-link" data-name="${value.name + '-' + key}">
+                        <img class="w-100" src="${iconUrl}">
                     </a>
                 </li>
                 `);
@@ -111,12 +121,12 @@ $(function () {
         createMoveList({ listOfItems: moveList });
         $('.move-list--icons').on('click', '.move-list--icon-link', function (e) {
             e.preventDefault();
-            $('.move-list--image').fadeOut('fast', () => {
-                const newArray = moveList.map((item) => item.name === $(this).data('name') ? { ...item, active: true } : { ...item, active: false });
+            $('.move-list--video').fadeOut('fast', () => {
+                const newArray = moveList.map((item, key) => item.name + '-' + key === $(this).data('name') ? { ...item, active: true } : { ...item, active: false });
                 $('.move-list--icons').empty();
                 createMoveList({ listOfItems: newArray });
             });
-            $('.move-list--image').fadeIn();
+            $('.move-list--video').fadeIn();
 
         });
     }
