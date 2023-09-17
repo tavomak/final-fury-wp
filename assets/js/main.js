@@ -94,7 +94,7 @@ $(function () {
                 let activeUrl;
                 let iconUrl;
                 if (value.video_id) {
-                    activeUrl = 'https://www.youtube.com/embed/'+ value.video_id +'?feature=oembed&enablejsapi=1&enablejsapi=1&autoplay=1';
+                    activeUrl = 'https://www.youtube.com/embed/'+ value.video_id +'?feature=oembed&enablejsapi=1&enablejsapi=1&autoplay=1&mute=1';
                 } else {
                     activeUrl = value?.video_file;
                 }

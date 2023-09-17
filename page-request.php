@@ -8,7 +8,7 @@
 
 <section
   class="container-fluid px-0 pt-5"
-  style="background: url(<?php echo bloginfo('template_directory');?>/assets/img/fighter-bg.png); background-size: cover;"
+  style="background: url(<?php echo bloginfo('template_directory');?>/assets/img/fighter-bg.png) center center no-repeat; background-size: cover;"
 >
   <div class="container">
     <div class="row justify-content-center mt-5">
@@ -21,7 +21,7 @@
   </div>
 </section>
 
-<section class="container">
+<section class="container pt-5 mt-5">
     <div class="row justify-content-between">
         <div class="col-md-5">
             <h2 class="fw-title-italic">WELCOME, CHAMPION!</h2>

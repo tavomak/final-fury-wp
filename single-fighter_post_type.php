@@ -126,6 +126,7 @@
                       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                       allowfullscreen=""
                       poster=""
+                      muted
                   >
                   </iframe>
               </div>
