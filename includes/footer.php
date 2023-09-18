@@ -106,7 +106,7 @@ $socialMedia = array(
                     </div>
                 </div>
             </div>
-            <div class="modal-body wpcf7" role="form" id="wpcf7-f5-o1" lang="es-ES" dir="ltr">
+            <div class="modal-body">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
