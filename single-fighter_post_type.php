@@ -21,14 +21,31 @@
           <ul class="d-flex">
             <?php if ($character['voice']): ?>
               <li class="text-uppercase">
-                Voice
-                <img src="<?php  echo bloginfo('template_directory');?>/assets/img/sound.svg" alt="<?php echo the_title();?> voice">
+                <a href="#!" class="voice-button">
+                  Voice
+                  <img src="<?php  echo bloginfo('template_directory');?>/assets/img/sound.svg" alt="<?php echo the_title();?> voice">
+                  <audio class="voice-audio">
+                    <source src="<?php echo $character['voice'];?>" type="audio/wav">
+                    Your browser does not support the audio element.
+                  </audio>
+                </a>
+              </li>
+            <?php endif; ?>
+            <?php if ($character['voice'] && $character['theme']): ?>
+              <li class="text-uppercase mx-3">
+              |
               </li>
             <?php endif; ?>
             <?php if ($character['theme']): ?>
               <li class="text-uppercase">
-                theme
-                <img src="<?php  echo bloginfo('template_directory');?>/assets/img/sound.svg" alt="<?php echo the_title();?> theme">
+                <a href="#!" class="theme-button">
+                  theme
+                  <img src="<?php  echo bloginfo('template_directory');?>/assets/img/sound.svg" alt="<?php echo the_title();?> theme">
+                  <audio class="theme-audio">
+                    <source src="<?php echo $character['theme'];?>" type="audio/wav">
+                    Your browser does not support the audio element.
+                  </audio>
+                </a>
               </li>
             <?php endif; ?>
           </ul>

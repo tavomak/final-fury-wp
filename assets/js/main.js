@@ -93,7 +93,6 @@ $(function () {
   if (data) {
     const moveList = data.move_list;
     const themeUri = data.base_url;
-    console.log({ moveList });
 
     const createMoveList = ({ listOfItems: list }) => {
       const moveListIcons = $(".move-list--icons");
@@ -173,6 +172,16 @@ $(function () {
       }
     });
   }
+
+  $('.voice-button').on('click', function (e) {
+      e.preventDefault();
+      $('.voice-audio').trigger('play');
+  });
+
+  $('.theme-button').on('click', function (e) {
+    e.preventDefault();
+    $('.theme-audio').trigger('play');
+});
 
   /* 
 	------------------------------------------------------------------

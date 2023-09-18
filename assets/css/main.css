@@ -190,7 +190,7 @@ strong, .font-bold {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: white;
+  background: black;
 }
 .cd-loader__grid {
   width: 150px;
