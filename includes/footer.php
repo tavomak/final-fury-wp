@@ -113,10 +113,13 @@ $socialMedia = array(
                             <img class="w-100 d-none d-md-block" src="<?php echo bloginfo('template_directory');?>/assets/img/contact-img.png" alt="https://klugeinteractive.com/" />
                         </div>
                         <div class="col-md-6">
-                            <form method="post" class="wpcf7-form" name="formulario_inicial" id="formulario_inicial">
+                            <form method="post" class="wpcf7-form" name="request_key" id="request_key">
                                 <div style="display: none;">
                                     <input type="hidden" name="_wpcf7" value="5">
-                                    <input type="hidden" name="_wpcf7_version" value="5.1.9">
+                                    <?php 
+                                        $plugin_data = get_plugin_data( ABSPATH . 'wp-content/plugins/contact-form-7/wp-contact-form-7.php' );
+                                        echo '<input type="hidden" name="_wpcf7_version" value="'.$plugin_data['Version'].'">';
+                                    ?>
                                     <input type="hidden" name="_wpcf7_locale" value="en_US">
                                     <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-o1">
                                     <input type="hidden" name="_wpcf7_container_post" value="0">
