@@ -85,8 +85,6 @@ $socialMedia = array(
     </section>
 </footer>
 
-<?php echo do_shortcode('[contact-form-7 id="2effa07" title="Contact form 1"]'); ?>
-
 <div class="modal fade" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="contact-form-modalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content bg-medium-blue">
