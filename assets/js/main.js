@@ -204,7 +204,7 @@ $(function () {
   $(".wpcf7").on("wpcf7mailsent", function (event) {
     $("#contact-form-modal").modal("hide");
     Toastify({
-      text: "Success",
+      text: "Your message was sent successfully",
       duration: 3000,
       close: true,
       gravity: "top", // `top` or `bottom`
@@ -220,7 +220,7 @@ $(function () {
   $(".wpcf7").on("wpcf7mailfailed", function (event) {
     console.log("Failed");
     Toastify({
-      text: "Success",
+      text: "your Message was not sent",
       duration: 3000,
       close: true,
       gravity: "top", // `top` or `bottom`
