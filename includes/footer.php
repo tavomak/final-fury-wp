@@ -113,84 +113,96 @@ $socialMedia = array(
                             <img class="w-100 d-none d-md-block" src="<?php echo bloginfo('template_directory');?>/assets/img/contact-img.png" alt="https://klugeinteractive.com/" />
                         </div>
                         <div class="col-md-6">
-                            <form method="post" class="wpcf7-form" name="request_key" id="request_key">
-                                <div style="display: none;">
-                                    <input type="hidden" name="_wpcf7" value="5">
-                                    <?php 
-                                        $plugin_data = get_plugin_data( ABSPATH . 'wp-content/plugins/contact-form-7/wp-contact-form-7.php' );
-                                        echo '<input type="hidden" name="_wpcf7_version" value="'.$plugin_data['Version'].'">';
-                                    ?>
-                                    <input type="hidden" name="_wpcf7_locale" value="en_US">
-                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-o1">
-                                    <input type="hidden" name="_wpcf7_container_post" value="0">
+                            <div class="wpcf7 brickcf7 w-100" role="form" id="wpcf7-f523-o1" lang="es-ES" dir="ltr" class="w-100 wp">
+                                <div class="screen-reader-response">
+                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
+                                    <ul></ul>
                                 </div>
-                                <div class="container-fluid">
-                                    <div class="form-group w-100 px-4 mb-4">
-                                        <span class="bk-projectcart--text__span"></span>
-                                        <label class="parallel--label" for="inputName">
-                                            <input
-                                                type="text"
-                                                class="form-control parallel--input"
-                                                id="inputName"
-                                                name="inputName"
-                                                placeholder="YOUR NAME"
-                                                required
-                                            >
-                                        </label>
+                                <form
+                                    class="wpcf7-form init"
+                                    id="contact_form_primary"
+                                    role="form"
+                                    method="post"
+                                    name="contact_form_primary"
+                                >
+                                    <div style="display: none;">
+                                        <input type="hidden" name="_wpcf7" value="5">
+                                        <?php 
+                                            $plugin_data = get_plugin_data( ABSPATH . 'wp-content/plugins/contact-form-7/wp-contact-form-7.php' );
+                                            echo '<input type="hidden" name="_wpcf7_version" value="'.$plugin_data['Version'].'">';
+                                        ?>
+                                        <input type="hidden" name="_wpcf7_locale" value="en_US">
+                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-o1">
+                                        <input type="hidden" name="_wpcf7_container_post" value="0">
                                     </div>
-                                    <div class="form-group w-100 px-4 mb-4">
-                                        <label class="parallel--label" for="inputEmail">
-                                            <input
-                                                type="email"
-                                                class="form-control parallel--input"
-                                                id="inputEmail"
-                                                name="inputEmail"
-                                                placeholder="EMAIL"
-                                                required
-                                            >
-                                        </label>
-                                    </div>
-                                    <div class="form-group w-100 px-4 mb-4">
-                                        <label class="parallel--label" for="inputTopic">
-                                            <input
-                                                type="text"
-                                                class="form-control parallel--input"
-                                                id="inputTopic"
-                                                name="inputTopic"
-                                                placeholder="TOPIC"
-                                                required
-                                            >
-                                        </label>
-                                    </div>
-                                    <div class="form-group w-100 px-4 mb-4">
-                                        <textarea
-                                            type="text"
-                                            class="form-control parallel--text-area"
-                                            id="inputTextArea"
-                                            name="inputTextArea"
-                                            placeholder="TELL US MORE."
-                                            required
-                                        ></textarea>
-                                    </div>
-                                    <div class="form-group w-100">
-                                        <div class="py-4">
-                                            <div class="ps-4">
-                                                <button
-                                                type="submit"
-                                                class="octagon"
+                                    <div class="container-fluid">
+                                        <div class="form-group w-100 px-4 mb-4">
+                                            <span class="bk-projectcart--text__span"></span>
+                                            <label class="parallel--label" for="inputName">
+                                                <input
+                                                    type="text"
+                                                    class="form-control parallel--input"
+                                                    id="inputName"
+                                                    name="inputName"
+                                                    placeholder="YOUR NAME"
+                                                    required
                                                 >
-                                                <div class="octagon--outer">
-                                                    <span class="octagon--inner text-uppercase">
-                                                        submit
-                                                    </span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group w-100 px-4 mb-4">
+                                            <label class="parallel--label" for="inputEmail">
+                                                <input
+                                                    type="email"
+                                                    class="form-control parallel--input"
+                                                    id="inputEmail"
+                                                    name="inputEmail"
+                                                    placeholder="EMAIL"
+                                                    required
+                                                >
+                                            </label>
+                                        </div>
+                                        <div class="form-group w-100 px-4 mb-4">
+                                            <label class="parallel--label" for="inputTopic">
+                                                <input
+                                                    type="text"
+                                                    class="form-control parallel--input"
+                                                    id="inputTopic"
+                                                    name="inputTopic"
+                                                    placeholder="TOPIC"
+                                                    required
+                                                >
+                                            </label>
+                                        </div>
+                                        <div class="form-group w-100 px-4 mb-4">
+                                            <textarea
+                                                type="text"
+                                                class="form-control parallel--text-area"
+                                                id="inputTextArea"
+                                                name="inputTextArea"
+                                                placeholder="TELL US MORE."
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <div class="form-group w-100">
+                                            <div class="py-4">
+                                                <div class="ps-4">
+                                                    <button
+                                                    type="submit"
+                                                    class="octagon"
+                                                    >
+                                                    <div class="octagon--outer">
+                                                        <span class="octagon--inner text-uppercase">
+                                                            submit
+                                                        </span>
+                                                    </div>
+                                                    </button>
                                                 </div>
-                                                </button>
+                                                <span class="ajax-loader"></span>
                                             </div>
-                                            <span class="ajax-loader"></span>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
