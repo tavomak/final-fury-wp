@@ -215,10 +215,10 @@ $(function () {
       },
       onClick: function () {}, // Callback after click
     }).showToast();
+    $('.wpcf7-form').reset();
   });
 
   $(".wpcf7").on("wpcf7mailfailed", function (event) {
-    console.log("Failed");
     Toastify({
       text: "your Message was not sent",
       duration: 3000,
