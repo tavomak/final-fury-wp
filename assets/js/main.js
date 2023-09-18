@@ -201,8 +201,8 @@ $(function () {
 	------------------------------------------------------------------
     */
 
-  $(".wpcf7").on("wpcf7:mailsent", function (event) {
-    $("#contacto-form-modal").modal("hide");
+  $(".wpcf7").on("wpcf7mailsent", function (event) {
+    $("#contact-form-modal").modal("hide");
     Toastify({
       text: "Success",
       duration: 3000,
