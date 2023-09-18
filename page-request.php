@@ -29,7 +29,7 @@
             <img class="w-100 d-none d-md-block" src="<?php echo bloginfo('template_directory');?>/assets/img/request-img.png" alt="https://klugeinteractive.com/" />
         </div>
         <div class="col-md-6">
-            <div class="wpcf7 brickcf7 w-100" role="form" id="wpcf7-f523-o1" lang="es-ES" dir="ltr" class="w-100 wp">
+            <div class="wpcf7 brickcf7 w-100" role="form" id="wpcf7-f131-o1" lang="es-ES" dir="ltr" class="w-100 wp">
                 <div class="screen-reader-response">
                     <p role="status" aria-live="polite" aria-atomic="true"></p>
                     <ul></ul>
@@ -42,13 +42,13 @@
                     name="request_key"
                 >
                     <div style="display: none;">
-                        <input type="hidden" name="_wpcf7" value="5">
+                        <input type="hidden" name="_wpcf7" value="131">
                         <?php 
                             $plugin_data = get_plugin_data( ABSPATH . 'wp-content/plugins/contact-form-7/wp-contact-form-7.php' );
                             echo '<input type="hidden" name="_wpcf7_version" value="'.$plugin_data['Version'].'">';
                         ?>
                         <input type="hidden" name="_wpcf7_locale" value="en_US">
-                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-o1">
+                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f131-o1">
                         <input type="hidden" name="_wpcf7_container_post" value="0">
                     </div>
                     <div class="container-fluid">
