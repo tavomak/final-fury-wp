@@ -132,12 +132,13 @@
       <div class="video-wrapper mb-3">
         <video
             id="iframe-<?php echo get_row_index(); ?>"
-            class="move-list--video youtubeVideo w-100"
+            class="move-list--video youtubeVideo w-100 d-none"
             title="Embed video <?php echo the_title();?>"
             src=""
             autoplay
             loop
             muted
+            poster=""
         >
         </video>
         <figure

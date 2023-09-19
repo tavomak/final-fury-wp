@@ -92,7 +92,7 @@ if ( ! function_exists('bk_enqueues') ) {
 				$count++;
 				array_push( 
 					$move_list, array(
-						"name" => $icon_type['value'] ? $icon_type['label'] : $icon_title,
+						"name" => $icon_type['value'] !== 'custom' ? $icon_type['label'] : $icon_title,
 						"active" => $count === 1,
 						"image" => $image,
 						"video_source" => $video_source,

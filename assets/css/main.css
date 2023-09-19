@@ -490,6 +490,15 @@ strong, .font-bold {
   content: url("../img/box-bottom.svg");
   bottom: 0;
   z-index: 1;
+  z-index: 1;
+}
+@supports (-webkit-appearance: none) {
+  @media (-webkit-min-device-pixel-ratio: 0) {
+    .parallelogram::after {
+      -webkit-transform: scale(1.007);
+              transform: scale(1.007);
+    }
+  }
 }
 .parallelogram--variant::before {
   content: url("../img/box-variant-top.svg");
@@ -553,6 +562,10 @@ strong, .font-bold {
 .parallelogram--text-close {
   overflow: hidden;
   height: 0;
+}
+.parallelogram--active {
+  background: rgb(0, 212, 255);
+  background: radial-gradient(circle, #FD3A4C 0%, black 60%, black 100%);
 }
 
 .parallel--label {

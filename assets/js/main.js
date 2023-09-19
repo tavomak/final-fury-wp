@@ -102,33 +102,26 @@ $(function () {
       moveListIcons.empty();
 
       $.each(list, function (key, value) {
-        let activeUrl;
         let iconUrl;
-        if (value.video_id) {
-          activeUrl =
-            "https://www.youtube.com/embed/" +
-            value.video_id +
-            "?feature=oembed&enablejsapi=1&enablejsapi=1&autoplay=1&mute=1";
-          moveListVideoEmbed.attr({
-            src: activeUrl,
-          });
-        } else {
-          activeUrl = value?.video_file;
-        }
 
         if (value.active) {
-          iconUrl =
-            value.move_icon_on ||
-            `${themeUri}icon-${value.icon_type}-active.png`;
-          moveListVideo.attr({
-            poster: value.image,
-            src: activeUrl,
-          });
-          $(".move-list--text-title").text(value.name);
+          iconUrl = value.move_icon_on || `${themeUri}icon-${value.icon_type}-active.png`;
+          $(".move-list--text-title").text(value.title || value.name);
           $(".move-list--text-description").text(value.description);
+
+          if ( value.video_source === "youTube") {
+            moveListVideoEmbed.attr({
+              src: "https://www.youtube.com/embed/" + value?.video_id + "?feature=oembed&enablejsapi=1&enablejsapi=1&autoplay=1&mute=1",
+            }).removeClass("d-none");
+          } else {
+            moveListVideo.attr({
+              poster: value.image,
+              src: value?.video_file,
+            }).removeClass("d-none");
+          }
+
         } else {
-          iconUrl =
-            value.move_icon_off || `${themeUri}icon-${value.icon_type}.png`;
+          iconUrl = value.move_icon_off || `${themeUri}icon-${value.icon_type}.png`;
         }
 
         moveListIcons.append(`

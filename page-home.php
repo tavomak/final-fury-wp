@@ -133,12 +133,12 @@
             </div>
             </div>
             <div class="modal-body p-0">
-              <div id="video-<?php echo get_row_index(); ?>" class="video-wrapper">
+              <div id="video-<?php echo get_row_index(). '-' . the_title();?>" class="video-wrapper">
                   <figure
                       class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio m-0">
                       <div class="wp-block-embed__wrapper">
                           <iframe
-                              id="iframe-<?php echo get_row_index(); ?>"
+                              id="iframe-<?php echo get_row_index(). '-' . the_title(); ?>"
                               class="<?php echo (is_numeric($video)) ? 'vimeo' : 'youtube' ;?> youtubeVideo"
                               title="Embed video Flora"
                               width="500"

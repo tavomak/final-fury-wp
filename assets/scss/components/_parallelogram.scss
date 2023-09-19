@@ -22,6 +22,12 @@
     content: url('../img/box-bottom.svg');
     bottom: 0;
     z-index: 1;
+    z-index: 1;
+    @supports (-webkit-appearance: none) {
+      @media (-webkit-min-device-pixel-ratio: 0) {
+        transform: scale(1.007);
+      }
+    }
   }
 
   &--variant {
@@ -84,6 +90,11 @@
   &--text-close {
     overflow: hidden;
     height: 0;
+  }
+
+  &--active {
+    background: rgb(0,212,255);
+background: radial-gradient(circle, $light-red 0%, $black 60%, $black 100%);
   }
 }
 
