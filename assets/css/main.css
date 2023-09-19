@@ -492,14 +492,6 @@ strong, .font-bold {
   z-index: 1;
   z-index: 1;
 }
-@supports (-webkit-appearance: none) {
-  @media (-webkit-min-device-pixel-ratio: 0) {
-    .parallelogram::after {
-      -webkit-transform: scale(1.007);
-              transform: scale(1.007);
-    }
-  }
-}
 .parallelogram--variant::before {
   content: url("../img/box-variant-top.svg");
   top: 7px;
