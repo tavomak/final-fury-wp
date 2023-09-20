@@ -12,16 +12,16 @@
           <div class="col">
               <div class="form-row">
                   <div class="form-group w-100 d-flex align-items-center">
-                    <div class="">
-                      <label htmlFor="email" class="parallel--label">
+                    <div class="form-octagon">
+                      <label htmlFor="email" class="form-octagon--outer-variant">
                         <input
                           type="email"
-                          class="form-control parallel--input"
+                          class="form-control form-octagon--inner-variant"
                           placeholder="YOUR EMAIL ADDRESS"
                         />
                       </label>
                     </div>
-                    <div class="ps-4">
+                    <div class="ps-2">
                       <button
                         type="button"
                         class="octagon"

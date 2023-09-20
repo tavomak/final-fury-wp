@@ -50,3 +50,65 @@
     width: 16px;
   }
 }
+
+%form-out {
+  padding: 1px 2px;
+  clip-path: polygon(10px 0, 98% 0, 100% 10px, 98% 100%, 2% 100%, 0 75%);
+}
+
+%form-in {
+  clip-path: polygon(10px 0, 98% 0, 100% 10px, 98% 100%, 2% 100%, 0 75%);
+}
+
+%variant-in {
+  clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+}
+%variant-out {
+  clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+}
+
+.form-octagon {
+  background: none;
+  outline: none;
+  border: none;
+  color: $white;
+  text-transform: uppercase;
+  @include MQ(XL) {
+    min-width:300px;
+  }
+  
+  &--outer {
+    @extend %form-out;
+    background-color: $white;
+    min-width: 100%;
+  }
+  
+  &--inner {
+    @extend %form-in;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: $black;
+    color: white;
+    &::placeholder {
+      color: $white !important;
+    }
+  }
+
+  &--outer-variant {
+    @extend %variant-out;
+    background-color: $white;
+    min-width: 100%;
+    padding: 1px 2px
+  }
+  
+  &--inner-variant {
+    @extend %variant-in;
+    background-color: $black;
+    color: white;
+    padding-left: 25px;
+    &::placeholder {
+      color: $white !important;
+    }
+  }
+
+}

@@ -10,14 +10,14 @@
   style="background: url(<?php echo bloginfo('template_directory');?>/assets/img/fighter-bg.png) no-repeat; background-size: contain;"
   >
   <div class="container pt-5">
-    <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center">
 
-      <div class="col-lg-4 order-lg-2">
+      <div class="col-lg-6 order-lg-2">
           <img class="w-100" src="<?php echo the_post_thumbnail_url();?>" alt="<?php echo the_title();?>">
       </div>
 
-      <div class="col-lg-4 order-lg-1">
-        <div class="px-lg-5">
+      <div class="col-lg-3 order-lg-1">
+        <div class="px-lg-5 mt-lg-5 pt-lg-5">
           <ul class="d-flex">
             <?php if ($character['voice']): ?>
               <li class="text-uppercase">
@@ -29,11 +29,6 @@
                     Your browser does not support the audio element.
                   </audio>
                 </a>
-              </li>
-            <?php endif; ?>
-            <?php if ($character['voice'] && $character['theme']): ?>
-              <li class="text-uppercase mx-3">
-              |
               </li>
             <?php endif; ?>
             <?php if ($character['theme']): ?>
@@ -54,8 +49,8 @@
         </div>
       </div>
 
-      <div class="col-lg-4 order-lg-3">
-        <div class="px-lg-5 text-uppercase">
+      <div class="col-lg-3 order-lg-3">
+        <div class="px-lg-5 text-uppercase mt-lg-5 pt-lg-5">
           <h2 class="fw-bold">Archetype</h2>
           <p><?php echo $character['archetype'];?></p>
           <h2 class="fw-bold">Stats</h2>

@@ -1,42 +1,61 @@
+%parallel-out {
+  padding: 2px;
+  clip-path: polygon(0% 20px,
+  /* top left */
+  15px 0%,
+  /* top left */
+  100% 0%,
+  /* top right */
+  100% 0%,
+  /* top right */
+  100% calc(100% - 20px),
+  /* bottom right */
+  calc(100% - 15px) 100%,
+  /* bottom right */
+  0% 100%,
+  /* bottom left */
+  0% 100%
+  /* bottom left */
+  );
+  transition: .2s ease-in-out all;
+  height: 100%;
+}
+
+%parallel-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0% 20px,
+  /* top left */
+  15px 0%,
+  /* top left */
+  100% 0%,
+  /* top right */
+  100% 0%,
+  /* top right */
+  100% calc(100% - 20px),
+  /* bottom right */
+  calc(100% - 15px) 100%,
+  /* bottom right */
+  0% 100%,
+  /* bottom left */
+  0% 100%
+  /* bottom left */
+  );
+  height: 100%;
+}
+
+
+
 .parallelogram {
   background: none;
   outline: none;
   border: none;
-  color: white;
+  color: $white;
   position: relative;
   text-align: left;
-  display: block;
-  width: 100%;
   height: 100%;
 
-  &::after, &::before {
-    display: block;
-    position: relative;
-  }
-  &::before {
-    content: url('../img/box-top.svg');
-    top: 7px;
-    z-index: 1;
-  }
-  &::after {
-    content: url('../img/box-bottom.svg');
-    bottom: 0;
-    z-index: 1;
-    z-index: 1;
-  }
-
-  &--variant {
-    &::before {
-      content: url('../img/box-variant-top.svg');
-      top: 7px;
-      z-index: 1;
-    }
-    &::after {
-      content: url('../img/box-variant-bottom.svg');
-      top: 0;
-      z-index: 1;
-    }
-  }
   &--title {
     padding-left: 20px;
     position: relative;
@@ -50,34 +69,46 @@
       top: 2px;
     }
   }
-  
-  &--content {
-    background: $dark-blue;
-    padding: 20px 50px;
-    position: relative;
-    z-index: 3;
-    min-height: 50%;
-    border-left: 1px solid $light-blue;
-    border-right: 1px solid $light-blue;
-  
-    @include MQ(S) {
-      border-left: 2px solid $light-blue;
-      border-right: 2px solid $light-blue;
+
+  &:hover {
+    .parallelogram--outer {
+      background-color: rgba($light-red, 1);
     }
-    @include MQ(M) {
-      border-left: 1px solid $light-blue;
-      border-right: 1px solid $light-blue;
+    .parallelogram--inner {
+      color: $light-red;
+      background-color: $dark-red;
     }
-    @include MQ(L) {
-      border-left: 1.5px solid $light-blue;
-      border-right: 1.5px solid $light-blue;
+    .parallelogram--outer-variant {
+      background-color: rgba($light-purple, 1);
     }
-    @include MQ(XL) {
-      border-left: 2px solid $light-blue;
-      border-right: 2px solid $light-blue;
+    .parallelogram--inner-variant {
+      background-color: $light-purple;
+      font-weight: 900;
     }
   }
+
+  &--outer {
+    @extend %parallel-out;
+    background-color: $light-blue;
+  }
   
+  &--inner {
+    @extend %parallel-in;
+    background-color: $dark-blue;
+    padding: 30px;
+  }
+  
+  &--outer-variant {
+    @extend %parallel-out;
+    background-color: $light-purple;
+  }
+  
+  &--inner-variant {
+    @extend %parallel-in;
+    background-color: $light-purple;
+    padding: 30px;
+  }
+
   &--text-open {
     height: auto;
   }
@@ -88,12 +119,9 @@
   }
 
   &--active {
-    background: rgb(0,212,255);
-background: radial-gradient(circle, $light-red 0%, $black 60%, $black 100%);
+    .parallelogram--outer {
+      background-color: rgba($light-red, 1);
+    }
   }
-}
 
-
-.parallel--label {
-  width: 100%;
 }

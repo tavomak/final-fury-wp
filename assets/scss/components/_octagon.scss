@@ -39,8 +39,7 @@
       background-color: rgba($light-purple, 1);
     }
     .octagon--inner-variant {
-      background-color: $light-purple;
-      font-weight: 900;
+      background-color: darken($light-purple, 5%);
     }
   }
 

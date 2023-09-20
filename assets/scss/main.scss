@@ -17,3 +17,23 @@
 @import "components/octagon";
 @import "components/input";
 @import "components/fighter-card";
+
+.videoModalBtn {
+  display: block;
+  &:hover {
+    box-shadow: 0 0 60px 0.25rem rgba($light-red, 0.8) !important;
+  }
+}
+
+.move-list--icon-link {
+  display: block;
+  padding-bottom: 4px;
+  img {
+    border-bottom: 2px solid transparent;
+  }
+  &:hover {
+    img {
+      border-bottom: 2px solid rgba($light-red, 1);
+    }
+  }
+}

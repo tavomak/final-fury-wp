@@ -11,12 +11,16 @@
         id="parallelogram-<?php echo $count; ?>"
         type="button"
       >
-        <div class="parallelogram--content">
-          <h3 class="parallelogram--title">
-            <?php the_title(); ?>
-          </h3>
-          <div class="parallelogram--text parallelogram--text-close">
-            <?php the_content(); ?>
+        <div class="parallelogram--outer">
+          <div class="parallelogram--inner">
+            <div class="parallelogram--content">
+              <h3 class="parallelogram--title">
+                <?php the_title(); ?>
+              </h3>
+              <div class="parallelogram--text parallelogram--text-close">
+                <?php the_content(); ?>
+              </div>
+            </div>
           </div>
         </div>
       </button>

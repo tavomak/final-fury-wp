@@ -24,6 +24,7 @@
     alt=""
     class="w-100 d-md-none"
   >
+  <div class="video-overlay--layer"></div>
   <video
     id="myVideo"
     loop
@@ -46,7 +47,7 @@
       <?php get_template_part('includes/form/sign-up'); ?>
     </div>
     <div class="col-lg-5 d-none d-lg-block">
-      <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-1.png" alt="" />
+      <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-3.png" alt="" />
     </div>
   </div>
 </section>
@@ -71,7 +72,7 @@
           rel="noreferrer"
         >
           <div class="octagon--outer-variant">
-            <span class="octagon--inner-variant px-lg-5">
+            <span class="octagon--inner-variant">
               <div class="px-5">
                 <i class="fab fa-discord me-2"></i>
                 <span>
@@ -115,7 +116,7 @@
       <?php get_template_part('includes/form/sign-up'); ?>
     </div>
     <div class="col-lg-5 order-md-1">
-      <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-3.png" alt="" />
+      <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-1.png" alt="" />
     </div>
   </div>
 </section>
