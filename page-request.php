@@ -8,7 +8,7 @@
 
 <section
   class="container-fluid px-0 pt-5"
-  style="background: url(<?php echo bloginfo('template_directory');?>/assets/img/fighter-bg.png) center center no-repeat; background-size: cover;"
+  style="background: url(<?php echo bloginfo('template_directory');?>/assets/img/request-bg.png) center bottom no-repeat; background-size: cover;"
 >
   <div class="container">
     <div class="row justify-content-center mt-5">
