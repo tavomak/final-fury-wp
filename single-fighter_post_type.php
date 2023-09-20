@@ -188,7 +188,7 @@
       <p>
         Join us in shaping the development of Final Fury before the game’s official release! By signing up you agree to receive communication about Final Fury from Kluge Interactive.
       </p>
-      <?php get_template_part('includes/form/sign-up'); ?>
+      <?php echo do_shortcode("[mc4wp_form id=154]"); ?>
     </div>
     <div class="col-lg-5 d-none d-lg-block">
       <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-1.png" alt="" />
