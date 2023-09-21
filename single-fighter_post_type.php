@@ -120,7 +120,7 @@
 </section>
 
 <section class="container move-list--container py-5">
-  <div class="row align-items-center">
+  <div class="row">
     <div class="col-md-6 order-md-2">
       <h2 class="fw-title-italic text-uppercase d-md-none">Move List</h2>
       <img class="move-list--image w-100" src="" alt="">
@@ -157,7 +157,7 @@
       </div>
     </div>
     <div class="col-md-6 order-md-1">
-      <div class="move-list--text-container">
+      <div class="move-list--text-container mt-md-5 pt-md-5">
         <h2 class="fw-title-italic ft-title text-uppercase d-none d-md-block">Move List</h2>
         <ul class="d-flex flex-wrap move-list--icons" style="max-width: 500px;"></ul>
         <ul class="move-list--text">
