@@ -191,7 +191,7 @@
       <?php echo do_shortcode("[mc4wp_form id=154]"); ?>
     </div>
     <div class="col-lg-5 d-none d-lg-block">
-      <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-1.png" alt="" />
+      <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-3.png" alt="" />
     </div>
   </div>
 </section>
