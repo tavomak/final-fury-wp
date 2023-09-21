@@ -155,13 +155,13 @@ $(function () {
       });
 
       if (isEmbed) {
-        moveListFigure.removeClass("d-none");
         moveListVideo.addClass("d-none");
-        moveListFigure.fadeIn();
+        moveListFigure.removeClass("d-none");
+        moveListFigure.fadeIn('fast');
       } else {
-        moveListVideo.removeClass("d-none");
         moveListFigure.addClass("d-none");
-        moveListVideo.fadeIn();
+        moveListVideo.removeClass("d-none");
+        moveListVideo.fadeIn('fast');
       }
     });
   }
