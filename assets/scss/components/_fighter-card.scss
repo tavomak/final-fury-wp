@@ -1,17 +1,22 @@
 .fighter-card {
   // border: 1px solid $light-blue;
   overflow: visible;
+  max-width: 50%;
   @include MQ(L) {
+    max-width: 33%;
+    left: -40px;
+  }
+  @include MQ(XL) {
     max-width: 25%;
     left: -40px;
   }
 
   &--img {
-    object-fit:cover;
-    object-position: center; 
-    height:400px;
     width: 100%;
-    @include MQ(L) {
+    @include MQ(XL) {
+      object-fit:cover;
+      object-position: center; 
+      height:400px;
       width: auto;
     }
     &-on {

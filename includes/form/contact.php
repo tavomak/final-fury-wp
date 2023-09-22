@@ -22,8 +22,8 @@
           <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f132-o1">
           <input type="hidden" name="_wpcf7_container_post" value="0">
       </div>
-      <div class="container-fluid">
-          <div class="form-group w-100 px-4 mb-4">
+      <div class="container-fluid px-0">
+          <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputName">
                   <input
@@ -37,7 +37,7 @@
               </label>
             </div>
           </div>
-          <div class="form-group w-100 px-4 mb-4">
+          <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputEmail">
                   <input
@@ -51,7 +51,7 @@
               </label>
             </div>
           </div>
-          <div class="form-group w-100 px-4 mb-4">
+          <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputTopic">
                   <input
@@ -65,7 +65,7 @@
               </label>
             </div>
           </div>
-          <div class="form-group w-100 px-4 mb-4">
+          <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputTextArea">
                 <textarea
@@ -80,21 +80,17 @@
             </div>
           </div>
           <div class="form-group w-100">
-              <div class="py-4">
-                  <div class="ps-4">
-                      <button
-                      type="submit"
-                      class="octagon"
-                      >
-                      <div class="octagon--outer">
-                          <span class="octagon--inner text-uppercase">
-                              submit
-                          </span>
-                      </div>
-                      </button>
-                  </div>
-                  <span class="ajax-loader"></span>
-              </div>
+            <button
+            type="submit"
+            class="octagon"
+            >
+            <div class="octagon--outer">
+                <span class="octagon--inner text-uppercase">
+                    submit
+                </span>
+            </div>
+            </button>
+            <span class="ajax-loader"></span>
           </div>
       </div>
   </form>

@@ -248,15 +248,6 @@ strong, .font-bold {
     max-width: 350px;
   }
 }
-.video-overlay--layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
 
 .hamburger {
   padding: 10px 10px;
@@ -428,9 +419,6 @@ strong, .font-bold {
   }
 }
 .header.open .navbar-nav {
-  position: relative;
-  left: -80px;
-  height: 80vh;
   padding-top: 40px;
 }
 @media screen and (min-width: 992px) {
@@ -441,12 +429,16 @@ strong, .font-bold {
   }
 }
 .header.open .navbar-item {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 992px) {
   .header.open .navbar-item {
     margin-bottom: auto;
   }
+}
+.header.open .navbar-item--mobile {
+  text-transform: uppercase;
+  font-size: 3.55em;
 }
 
 .underline {
@@ -561,8 +553,8 @@ strong, .font-bold {
 
 .octagon--outer-variant, .octagon--outer {
   padding: 2px 3px;
-  -webkit-clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
-          clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+  -webkit-clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
+          clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
   -webkit-transition: 0.2s ease-in-out all;
   transition: 0.2s ease-in-out all;
 }
@@ -579,8 +571,8 @@ strong, .font-bold {
           justify-content: center;
   min-width: 120px;
   height: 38px;
-  -webkit-clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
-          clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+  -webkit-clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
+          clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
 }
 @media screen and (min-width: 992px) {
   .octagon--inner-variant, .octagon--inner {
@@ -710,23 +702,28 @@ strong, .font-bold {
 
 .form-octagon--outer {
   padding: 1px 2px;
-  -webkit-clip-path: polygon(10px 0, 98% 0, 100% 10px, 98% 100%, 2% 100%, 0 75%);
-          clip-path: polygon(10px 0, 98% 0, 100% 10px, 98% 100%, 2% 100%, 0 75%);
+  -webkit-clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
+          clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
 }
 
 .form-octagon--inner {
-  -webkit-clip-path: polygon(10px 0, 98% 0, 100% 10px, 98% 100%, 2% 100%, 0 75%);
-          clip-path: polygon(10px 0, 98% 0, 100% 10px, 98% 100%, 2% 100%, 0 75%);
+  -webkit-clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
+          clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
 }
 
 .form-octagon--inner-variant {
-  -webkit-clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
-          clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+  -webkit-clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
+          clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
+}
+@media screen and (min-width: 992px) {
+  .form-octagon--inner-variant {
+    height: 34px;
+  }
 }
 
 .form-octagon--outer-variant {
-  -webkit-clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
-          clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+  -webkit-clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
+          clip-path: polygon(15px 0, calc(100% - 5px) 0, 100% 8px, calc(100% - 15px) 100%, 5px 100%, 0 75%);
 }
 
 .form-octagon {
@@ -794,23 +791,30 @@ strong, .font-bold {
 
 .fighter-card {
   overflow: visible;
+  max-width: 50%;
 }
 @media screen and (min-width: 992px) {
+  .fighter-card {
+    max-width: 33%;
+    left: -40px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .fighter-card {
     max-width: 25%;
     left: -40px;
   }
 }
 .fighter-card--img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  height: 400px;
   width: 100%;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .fighter-card--img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    height: 400px;
     width: auto;
   }
 }
@@ -842,11 +846,29 @@ strong, .font-bold {
 .move-list--icon-link {
   display: block;
   padding-bottom: 4px;
+  position: relative;
 }
 .move-list--icon-link img {
-  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
 }
-.move-list--icon-link:hover img {
-  border-bottom: 2px solid #fd3a4c;
+.move-list--icon-link::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: none;
+  position: relative;
+  left: 19px;
+}
+.move-list--icon-link:hover::after {
+  content: "";
+  background: #FD3A4C;
+}
+
+.logo--svg {
+  fill: white;
+}
+.logo--svg:hover {
+  fill: #FD3A4C;
 }
 /*# sourceMappingURL=main.css.map */

@@ -53,18 +53,67 @@
 
 %form-out {
   padding: 1px 2px;
-  clip-path: polygon(10px 0, 98% 0, 100% 10px, 98% 100%, 2% 100%, 0 75%);
+  clip-path: polygon(
+    /* top left */
+    15px 0,
+    /* top right */
+    calc(100% - 5px) 0,
+    100% 8px,
+    /* bottom right */
+    calc(100% - 15px) 100%,
+    /* bottom left */
+    5px 100%,
+    0 75%
+  );
 }
 
 %form-in {
-  clip-path: polygon(10px 0, 98% 0, 100% 10px, 98% 100%, 2% 100%, 0 75%);
+  clip-path: polygon(
+    /* top left */
+    15px 0,
+    /* top right */
+    calc(100% - 5px) 0,
+    100% 8px,
+    /* bottom right */
+    calc(100% - 15px) 100%,
+    /* bottom left */
+    5px 100%,
+    0 75%
+  );
+
 }
 
 %variant-in {
-  clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+  clip-path: polygon(
+    /* top left */
+    15px 0,
+    /* top right */
+    calc(100% - 5px) 0,
+    100% 8px,
+    /* bottom right */
+    calc(100% - 15px) 100%,
+    /* bottom left */
+    5px 100%,
+    0 75%
+  );
+  @include MQ(L) {
+    height: 34px;
+  }
 }
 %variant-out {
-  clip-path: polygon(10% 0, 98% 0, 100% 20%, 90% 100%, 2% 100%, 0 75%);
+  clip-path: polygon(
+    /* top left */
+    15px 0,
+    /* top right */
+    calc(100% - 5px) 0,
+    100% 8px,
+    /* bottom right */
+    calc(100% - 15px) 100%,
+    /* bottom left */
+    5px 100%,
+    0 75%
+  );
+
 }
 
 .form-octagon {

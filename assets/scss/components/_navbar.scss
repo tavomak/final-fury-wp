@@ -24,9 +24,9 @@
             height: auto;
         }
         & .navbar-nav {
-            position: relative;
-            left: -80px;
-            height: 80vh;
+            // position: relative;
+            // left: -80px;
+            // height: 80vh;
             padding-top: 40px;
             @include MQ(L) {
                 height: auto;
@@ -35,9 +35,13 @@
             }
         }
         & .navbar-item {
-            margin-bottom: 40px;
+            margin-bottom: 10px;
             @include MQ(L) {
                 margin-bottom: auto;
+            }
+            &--mobile {
+                text-transform: uppercase;
+                font-size: 3.55em;
             }
         }
     }

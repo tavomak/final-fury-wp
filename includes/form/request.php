@@ -23,7 +23,7 @@
           <input type="hidden" name="_wpcf7_container_post" value="0">
       </div>
       <div class="container-fluid">
-          <div class="form-group w-100 px-4 mb-4">
+          <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputName">
                   <input
@@ -37,7 +37,7 @@
               </label>
             </div>
           </div>
-          <div class="form-group w-100 px-4 mb-4">
+          <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputEmail">
                   <input
@@ -51,7 +51,7 @@
               </label>
             </div>
           </div>
-          <div class="form-group w-100 px-4 mb-4">
+          <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputPlatform">
                   <select class="form-select form-octagon--inner" aria-label="Select Platform">
@@ -63,7 +63,7 @@
               </label>
             </div>
           </div>
-          <div class="form-group w-100 px-4 mb-4">
+          <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputPlatform">
                   <input
@@ -77,7 +77,7 @@
               </label>
             </div>
           </div>
-          <div class="form-group w-100 px-4 mb-4">
+          <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputTextArea">
                 <textarea
@@ -92,21 +92,17 @@
             </div>
           </div>
           <div class="form-group w-100">
-              <div class="py-4">
-                  <div class="ps-4">
-                      <button
-                      type="submit"
-                      class="octagon"
-                      >
-                      <div class="octagon--outer">
-                          <span class="octagon--inner text-uppercase">
-                              submit
-                          </span>
-                      </div>
-                      </button>
-                  </div>
-                  <span class="ajax-loader"></span>
-              </div>
+            <button
+            type="submit"
+            class="octagon"
+            >
+            <div class="octagon--outer">
+                <span class="octagon--inner text-uppercase">
+                    submit
+                </span>
+            </div>
+            </button>
+            <span class="ajax-loader"></span>
           </div>
       </div>
   </form>

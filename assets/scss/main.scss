@@ -28,12 +28,31 @@
 .move-list--icon-link {
   display: block;
   padding-bottom: 4px;
+  position: relative;
   img {
-    border-bottom: 2px solid transparent;
+    padding-bottom: 5px ;
+    
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: none;
+    position: relative;
+    left: 19px;
   }
   &:hover {
-    img {
-      border-bottom: 2px solid rgba($light-red, 1);
+    &::after {
+      content: '';
+      background: $light-red;
     }
+  }
+}
+
+.logo--svg {
+  fill: $white;
+  &:hover {
+    fill: $light-red;
   }
 }

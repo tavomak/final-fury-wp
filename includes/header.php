@@ -37,12 +37,13 @@
                 </span>
               </button>
             </div>
-            <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav justify-content-md-center w-100">
                 <li class="navbar-item">
+                  <a class="d-md-none navbar-item--mobile fw-title-italic" href="<?php bloginfo('url');?>">Home</a>
                   <a
                     href="<?php bloginfo('url');?>"
-                    class="octagon"
+                    class="octagon d-none d-md-block"
                   >
                     <div class="octagon--outer">
                       <span class="octagon--inner">
@@ -52,9 +53,10 @@
                   </a>
                 </li>
                 <li class="navbar-item">
+                  <a class="d-md-none navbar-item--mobile fw-title-italic" href="<?php echo site_url('/fighters');?>">Fighters</a>
                   <a
                     href="<?php echo site_url('/fighters');?>"
-                    class="octagon"
+                    class="octagon d-none d-md-block"
                   >
                     <div class="octagon--outer">
                       <span class="octagon--inner">
@@ -64,10 +66,10 @@
                   </a>
                 </li>
                 <li class="navbar-item">
+                  <a class="d-md-none navbar-item--mobile fw-title-italic" href="<?php echo site_url('/contact');?>">Contact</a>
                   <a
-                    href="!#"
-                    class="octagon contactModalBtn"
-                    data-toggle="modal" data-target="#contacto-form-modal"
+                  href="<?php echo site_url('/contact');?>"
+                    class="octagon d-none d-md-block"
                   >
                     <div class="octagon--outer">
                       <span class="octagon--inner">

@@ -4,7 +4,7 @@
     <?php while ( $query->have_posts() ) : $query->the_post();
     $count++;
     ?>
-    <div class="col-md-6 my-4 ">
+    <div class="col-md-6 my-2 my-lg-3 pb-lg-1">
 
       <button
         class="parallelogram  <?php echo ( $count % 2 === 0 ) ? '' : 'parallelogram--variant'; ?>"

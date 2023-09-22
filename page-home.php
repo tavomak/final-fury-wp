@@ -24,7 +24,6 @@
     alt=""
     class="w-100 d-md-none"
   >
-  <div class="video-overlay--layer"></div>
   <video
     id="myVideo"
     loop
@@ -55,7 +54,7 @@
 <section class="container py-md-4 my-5">
   <div class="row align-items-center justify-content-between">
     <div class="col-lg-6">
-      <a href="#" class="videoModalBtn">
+      <a href="#" class="videoModalBtn mb-3">
         <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/home-2.jpg" alt="" />
       </a>
     </div>
