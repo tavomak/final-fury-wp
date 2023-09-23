@@ -22,7 +22,7 @@
           <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f131-o1">
           <input type="hidden" name="_wpcf7_container_post" value="0">
       </div>
-      <div class="container-fluid">
+      <div class="container-fluid p-0">
           <div class="form-group w-100  mb-4">
             <div class="form-octagon">
               <label class="form-octagon--outer" for="inputName">

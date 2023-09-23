@@ -36,11 +36,11 @@
   &::after {
     content: '';
     display: block;
-    width: 40px;
+    width: 50px;
     height: 1px;
     background: none;
     position: relative;
-    left: 19px;
+    left: 12px;
   }
   &:hover {
     &::after {

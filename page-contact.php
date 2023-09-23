@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row justify-content-center mt-5">
         <div class="col col-lg-5">
-        <h1 class="pb-5">
+        <h1 class="pb-4">
             <img class="w-100" src="<?php echo bloginfo('template_directory');?>/assets/img/contact-title.svg" alt="CHOOSE YOUR FIGHTER" />
         </h1>
         </div>
