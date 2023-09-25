@@ -167,13 +167,26 @@ $(function () {
   }
 
   $('.voice-button').on('click', function (e) {
-      e.preventDefault();
-      $('.voice-audio').trigger('play');
+    e.preventDefault();
+    const audioElement = $('.voice-audio')[0];
+  
+    if (audioElement.paused) {
+      audioElement.play();
+    } else {
+      audioElement.pause();
+    }
   });
 
   $('.theme-button').on('click', function (e) {
     e.preventDefault();
-    $('.theme-audio').trigger('play');
+
+    const audioElement = $('.theme-audio')[0];
+
+    if (audioElement.paused) {
+      audioElement.play();
+    } else {
+      audioElement.pause();
+    }
 });
 
   /* 
