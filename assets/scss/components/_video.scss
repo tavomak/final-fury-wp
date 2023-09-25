@@ -5,7 +5,7 @@
   z-index: 2;
   @include MQ(M){
     padding-top: auto;
-    @include center(x);
+    @include center(xy);
     bottom: 15%;
   }
   &--content-img {
