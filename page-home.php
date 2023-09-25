@@ -1,7 +1,8 @@
 <?php
     get_template_part('includes/header'); 
     bk_main_before();
-    $video = 'dbHLMopYsuQ';
+    $video = get_field('video_modal');
+    $bg_video = get_field('background_video');
 ?>
 
 <section class="position-relative">
