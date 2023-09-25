@@ -33,7 +33,7 @@
     class="active muted w-100  d-none d-md-block"
     poster="<?php echo bloginfo('template_directory');?>/assets/img/video-poster.jpg"
   >
-    <source src="<?php echo bloginfo('template_directory');?>/assets/img/home-loop.mp4" type="video/mp4" />
+    <source src="<?php echo $bg_video;?>" type="video/mp4" />
   </video>
 </section>
 
