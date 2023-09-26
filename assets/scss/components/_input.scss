@@ -158,6 +158,10 @@
     &::placeholder {
       color: $white !important;
     }
+    &:focus {
+      background: $black;
+      color: $white !important;
+    }
   }
 
 }

@@ -115,7 +115,6 @@ $(function () {
             }).removeClass("d-none");
           } else {
             moveListVideo.attr({
-              poster: value.image,
               src: value?.video_file,
             }).removeClass("d-none");
           }

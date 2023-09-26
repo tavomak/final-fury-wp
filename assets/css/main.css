@@ -790,6 +790,10 @@ strong, .font-bold {
 .form-octagon--inner-variant::placeholder {
   color: white !important;
 }
+.form-octagon--inner-variant:focus {
+  background: black;
+  color: white !important;
+}
 
 .fighter-card {
   overflow: visible;
@@ -847,6 +851,11 @@ strong, .font-bold {
 
 .move-list--text {
   min-height: 150px;
+}
+
+.move-list--video {
+  max-height: 362px;
+  background-size: contain;
 }
 
 .move-list--icon-link {

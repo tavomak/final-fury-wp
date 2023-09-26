@@ -133,7 +133,7 @@
             autoplay
             loop
             muted
-            poster=""
+            poster="<?php echo bloginfo('template_directory');?>/assets/img/bg-loading.gif"
         >
         </video>
         <figure
@@ -148,7 +148,7 @@
                     frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen=""
-                    poster=""
+                    poster="<?php echo bloginfo('template_directory');?>/assets/img/bg-loading.gif"
                     muted
                 >
                 </iframe>
