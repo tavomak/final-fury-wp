@@ -16,7 +16,7 @@
             src="<?php echo bloginfo('template_directory');?>/assets/img/final-fury-logo.png"
             alt="" />
         </div>
-        <h1 class="fw-title-italic">A CLASSIC ARCADE FIGHTING GAME REIMAGINED FOR VR</h1>
+        <h1 class="fw-title-italic">A CLASSIC ARCADE FIGHTING GAME <br> REIMAGINED FOR VR</h1>
         <p>Coming 2024 to all major platforms</p>
       </div>
   </div>
