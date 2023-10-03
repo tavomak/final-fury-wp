@@ -171,10 +171,10 @@
 
 <section class="container py-5">
   <div class="row align-items-center">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <img class="w-100 mb-3" src="<?php echo $character['bio_image'];?>" alt="<?php echo the_title();?>">
     </div>
-    <div class="col-md-6">
+    <div class="col-md-12">
       <h2 class="fw-title-italic ft-title text-uppercase">Biography</h2>
       <p><?php the_content();?></p>
     </div>
@@ -202,7 +202,7 @@
     'posts_per_page' => -1,
     'post_status' => 'publish',
   );
-  $fighters = new WP_Query($args);
+  $query = new WP_Query($args);
   include( locate_template( './includes/loops/fighters.php', false, false) );
 ?>
 

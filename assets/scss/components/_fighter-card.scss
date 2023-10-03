@@ -1,40 +1,61 @@
 .fighter-card {
-  // border: 1px solid $light-blue;
-  overflow: visible;
-  max-width: 50%;
+  width: 50%;
+  margin-bottom: 56px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: italic;
+
   @include MQ(L) {
     max-width: 33%;
-    left: -40px;
+    margin-bottom: 76px;
+    
   }
   @include MQ(XL) {
     max-width: 25%;
-    left: -40px;
+    margin-bottom: 76px;
   }
 
-  &--img {
-    width: 100%;
-    @include MQ(XL) {
-      object-fit:cover;
-      object-position: center; 
-      height:400px;
-      width: auto;
-    }
-    &-on {
-      position: absolute;
-      opacity: 0;
-      transition: .2s ease-in-out all;
-    }
+  .fondo {
+    fill: url(#gradient);
   }
+
+  .card-on {
+    opacity: 1;
+    transition: all .5s ease-in-out;
+  }
+
+  svg {
+    transform: scale(1.1);
+    transition: all ease-in-out .25s;
+  }
+
   &:hover {
-    .fighter-card--img-on {
-      opacity: 1;
+    & svg {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 22px rgba($light-red, 0.8));
+    }
+    & .fondo {
+      animation: filam .2s ease-in;
+      animation-fill-mode: forwards;
+    }
+    & .card-on {
+      opacity: 0;
     }
   }
 }
 
-.single .fighter-card {
-  @include MQ(L) {
-    max-width: 30%;
-    left: 0;
+.stop1 {
+  stop-color: rgb(19, 124, 133);
+}
+.stop2 {
+  stop-color: $light-red;
+}
+
+@keyframes filam{
+  0%{
+    fill: url(#gradient);
+  }
+  100%{
+    fill: url(#gradient2);
   }
 }

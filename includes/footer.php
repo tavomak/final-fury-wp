@@ -7,7 +7,7 @@ $socialMedia = array(
     ),
     array(
         'name' => 'Instagram',
-        'link' => 'https://www.twitter.com/example',
+        'link' => 'https://www.instagram.com/finalfuryvr/',
         'icon' => '<i class="fab fa-instagram"></i>',
     ),
     array(

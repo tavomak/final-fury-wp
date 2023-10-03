@@ -796,51 +796,79 @@ strong, .font-bold {
 }
 
 .fighter-card {
-  overflow: visible;
-  max-width: 50%;
+  width: 50%;
+  margin-bottom: 56px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: italic;
 }
 @media screen and (min-width: 992px) {
   .fighter-card {
     max-width: 33%;
-    left: -40px;
+    margin-bottom: 76px;
   }
 }
 @media screen and (min-width: 1200px) {
   .fighter-card {
     max-width: 25%;
-    left: -40px;
+    margin-bottom: 76px;
   }
 }
-.fighter-card--img {
-  width: 100%;
+.fighter-card .fondo {
+  fill: url(#gradient);
 }
-@media screen and (min-width: 1200px) {
-  .fighter-card--img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
-    height: 400px;
-    width: auto;
-  }
-}
-.fighter-card--img-on {
-  position: absolute;
-  opacity: 0;
-  -webkit-transition: 0.2s ease-in-out all;
-  transition: 0.2s ease-in-out all;
-}
-.fighter-card:hover .fighter-card--img-on {
+.fighter-card .card-on {
   opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.fighter-card svg {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
+}
+.fighter-card:hover svg {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: drop-shadow(0 0 22px rgba(253, 58, 76, 0.8));
+          filter: drop-shadow(0 0 22px rgba(253, 58, 76, 0.8));
+}
+.fighter-card:hover .fondo {
+  -webkit-animation: filam 0.2s ease-in;
+          animation: filam 0.2s ease-in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.fighter-card:hover .card-on {
+  opacity: 0;
 }
 
-@media screen and (min-width: 992px) {
-  .single .fighter-card {
-    max-width: 30%;
-    left: 0;
+.stop1 {
+  stop-color: rgb(19, 124, 133);
+}
+
+.stop2 {
+  stop-color: #FD3A4C;
+}
+
+@-webkit-keyframes filam {
+  0% {
+    fill: url(#gradient);
+  }
+  100% {
+    fill: url(#gradient2);
   }
 }
 
+@keyframes filam {
+  0% {
+    fill: url(#gradient);
+  }
+  100% {
+    fill: url(#gradient2);
+  }
+}
 .videoModalBtn {
   display: block;
 }
