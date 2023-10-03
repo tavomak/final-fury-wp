@@ -801,6 +801,7 @@ strong, .font-bold {
   text-transform: uppercase;
   font-weight: 700;
   font-style: italic;
+  cursor: pointer;
 }
 @media screen and (min-width: 992px) {
   .fighter-card {

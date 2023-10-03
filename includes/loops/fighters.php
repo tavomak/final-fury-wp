@@ -23,9 +23,16 @@
                 <?php while ( $query->have_posts() ) : $query->the_post();
                     $card = get_field('fighter_card');
                     $card_on = get_field('fighter_card_on');
+                    $checker = get_field('turn_off_access');
+                    if ($checker) {
+                        echo '<span class="position-relative fighter-card">';
+                    } else {
+                        echo '<a href="';
+                        echo the_permalink();
+                        echo '" class="position-relative fighter-card">';
+                    }
+                    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
                 ?>
-                <a href="<?php echo the_permalink();?>" class="position-relative fighter-card">
-                <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );?>
                     <svg viewBox="0 0 440 380">
                         <defs>
                             <radialGradient id="gradient" cx="0" cy="1" r="1.7">
@@ -55,8 +62,14 @@
                             </text>
                         </g>
                     </svg>
-                </a>
-                <?php endwhile; wp_reset_postdata(); ?>
+                    <?php
+                        if ($checker) {
+                            echo '</span>';
+                        } else {
+                            echo '</a>';
+                        }
+                        endwhile; wp_reset_postdata();
+                    ?>
             </div>
           </div>
       </div>

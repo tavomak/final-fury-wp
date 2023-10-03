@@ -4,6 +4,7 @@
   text-transform: uppercase;
   font-weight: 700;
   font-style: italic;
+  cursor: pointer;
 
   @include MQ(L) {
     max-width: 33%;
