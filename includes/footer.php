@@ -72,7 +72,7 @@ $socialMedia = array(
               </span>
             </a>
           </div>
-          <div class="text-center py-4 accordion-outer">
+          <div class="text-center py-4 accordion-outer mt-5">
             <span class="me-3">
               a game by:
             </span>
