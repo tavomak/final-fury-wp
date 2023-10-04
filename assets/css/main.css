@@ -830,11 +830,26 @@ strong, .font-bold {
   stroke-width: 0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  -webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
+          filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
 }
 .fighter-card .card-on {
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+.fighter-card .upcoming {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  fill: #2d2d2d;
+}
+.fighter-card .upcoming-label {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  -webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
+          filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
 }
 .fighter-card svg {
   -webkit-transform: scale(1.1);
@@ -861,8 +876,17 @@ strong, .font-bold {
   -webkit-filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.8));
           filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.8));
 }
+.fighter-card:hover.variant .card-label {
+  opacity: 0;
+}
 .fighter-card:hover.variant .line {
   stroke: white;
+}
+.fighter-card:hover.variant .upcoming {
+  opacity: 0.9;
+}
+.fighter-card:hover.variant .upcoming-label {
+  opacity: 1;
 }
 .fighter-card:hover .card-on {
   opacity: 0;
