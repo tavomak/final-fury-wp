@@ -825,6 +825,12 @@ strong, .font-bold {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+.fighter-card .card-label {
+  stroke: white;
+  stroke-width: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
 .fighter-card .card-on {
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
@@ -853,6 +859,9 @@ strong, .font-bold {
 }
 .fighter-card:hover .card-on {
   opacity: 0;
+}
+.fighter-card:hover .card-label {
+  stroke-width: 1.5;
 }
 
 .stop1 {
