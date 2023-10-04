@@ -857,6 +857,13 @@ strong, .font-bold {
 .fighter-card:hover .line {
   stroke: #FD3A4C;
 }
+.fighter-card:hover.variant svg {
+  -webkit-filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.8));
+          filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.8));
+}
+.fighter-card:hover.variant .line {
+  stroke: white;
+}
 .fighter-card:hover .card-on {
   opacity: 0;
 }

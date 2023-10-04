@@ -56,6 +56,15 @@
     & .line {
       stroke: $light-red;
     }
+    &.variant {
+      & svg {
+        filter: drop-shadow(0 0 22px rgba($white, 0.8));
+      }
+      & .line {
+        stroke: $white;
+      }
+    }
+    
     & .card-on {
       opacity: 0;
     }

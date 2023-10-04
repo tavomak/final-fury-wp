@@ -25,7 +25,7 @@
                     $card_on = get_field('fighter_card_on');
                     $checker = get_field('turn_off_access');
                     if ($checker) {
-                        echo '<span class="position-relative fighter-card">';
+                        echo '<span class="position-relative fighter-card variant">';
                     } else {
                         echo '<a href="';
                         echo the_permalink();
