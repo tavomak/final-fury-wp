@@ -56,8 +56,8 @@
                             <rect x="0" y="0" width="440" height="380" class="fondo"/>
                             <image class="card-off" xlink:href="<?php echo $card_on;?>" style="width: 90%;" />
                             <image class="card-on" xlink:href="<?php echo $card;?>" style="width: 90%;" />
-                            <path d="m436.5,0H143l-34.47,26L0,380h294l33.97-26L436.5,0Z" style="fill:none;stroke:white;stroke-width:4"/>
-                            <text x="40%" y="95%" font-size="50" fill="white" class="card-label" text-anchor="middle" style="stroke:black;stroke-width:1.5">
+                            <path d="m436.5,0H143l-34.47,26L0,380h294l33.97-26L436.5,0Z" class="line"/>
+                            <text x="40%" y="95%" font-size="50" fill="white" class="card-label" text-anchor="middle">
                                 <?php echo the_title();?>
                             </text>
                         </g>

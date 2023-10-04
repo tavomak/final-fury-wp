@@ -818,6 +818,13 @@ strong, .font-bold {
 .fighter-card .fondo {
   fill: url(#gradient);
 }
+.fighter-card .line {
+  fill: none;
+  stroke: white;
+  stroke-width: 4;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
 .fighter-card .card-on {
   opacity: 1;
   -webkit-transition: all 0.5s ease-in-out;
@@ -840,6 +847,9 @@ strong, .font-bold {
           animation: filam 0.2s ease-in;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+.fighter-card:hover .line {
+  stroke: #FD3A4C;
 }
 .fighter-card:hover .card-on {
   opacity: 0;

@@ -20,6 +20,13 @@
     fill: url(#gradient);
   }
 
+  .line {
+    fill:none;
+    stroke:$white;
+    stroke-width:4;
+    transition: all .5s ease-in-out;
+  }
+
   .card-on {
     opacity: 1;
     transition: all .5s ease-in-out;
@@ -38,6 +45,9 @@
     & .fondo {
       animation: filam .2s ease-in;
       animation-fill-mode: forwards;
+    }
+    & .line {
+      stroke: $light-red;
     }
     & .card-on {
       opacity: 0;
