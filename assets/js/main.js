@@ -132,17 +132,35 @@ $(function () {
 
   $('.voice-button').on('click', function (e) {
     e.preventDefault();
-    const audioElement = $('.voice-audio')[0];
+
+    const audioElements = $('.voice-audio');
+    const currentIndex = $(this).data('currentIndex') || 0;
+
+    audioElements.each(function() {
+      this.pause();
+      this.currentTime = 0;
+    });
+
+    $('.theme-audio')[0].pause();
   
+    const audioElement = audioElements[currentIndex];
     if (audioElement.paused) {
       audioElement.play();
     } else {
       audioElement.pause();
     }
+
+    const nextIndex = (currentIndex + 1) % audioElements.length;
+    $(this).data('currentIndex', nextIndex);
   });
 
   $('.theme-button').on('click', function (e) {
     e.preventDefault();
+    const voiceElements = $('.voice-audio');
+
+    voiceElements.each(function() {
+      this.pause();
+    });
 
     const audioElement = $('.theme-audio')[0];
 

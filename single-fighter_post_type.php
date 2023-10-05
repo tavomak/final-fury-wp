@@ -28,6 +28,14 @@
                     <source src="<?php echo $character['voice'];?>" type="audio/wav">
                     Your browser does not support the audio element.
                   </audio>
+                  <audio class="voice-audio">
+                    <source src="<?php echo $character['voice_2'];?>" type="audio/wav">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <audio class="voice-audio">
+                    <source src="<?php echo $character['voice_3'];?>" type="audio/wav">
+                    Your browser does not support the audio element.
+                  </audio>
                 </a>
               </li>
             <?php endif; ?>
