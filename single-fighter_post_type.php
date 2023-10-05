@@ -159,10 +159,51 @@
     <div class="col-md-6 order-md-1">
       <div class="move-list--text-container mt-md-5 pt-md-5">
         <h2 class="fw-title-italic ft-title text-uppercase d-none d-md-block">Move List</h2>
-        <ul class="d-flex flex-wrap move-list--icons" style="max-width: 500px;"></ul>
+        <?php if( have_rows('move_list') ): 
+          $count = 0;
+          $active_title = null;
+          $active_desc = null;
+          $active_video = null;
+        ?>
+        <ul class="d-flex flex-wrap move-list--icons" style="max-width: 500px;">
+          <?php while( have_rows('move_list') ): the_row();
+            $icon_type = get_sub_field('icon');
+            $icon_title = get_sub_field('icon_title');
+            $icon_description = get_sub_field('description');
+            $icon_on = get_sub_field('move_icon_on');
+            $icon_off = get_sub_field('move_icon_off');
+            $video_source = get_sub_field('video_source');
+            $video_file = get_sub_field('video_file');
+            $video_youtube = get_sub_field('youtube_video_id');
+            $count ++;
+            if ($count === 1) {
+              $active_title = $icon_title;
+              $active_desc = $icon_description;
+            }
+          ?>
+            <li class="px-2" style="width: 20%">
+              <a
+                href="#"
+                class="move-list--icon-link <?php echo $count === 1 ? 'move-list--active' : '';?>"
+                data-type="<?php echo $video_source;?>"
+                data-source="<?php echo $video_source === 'youtube' ? $video_youtube : $video_file;?>"
+                data-name="<?php echo $icon_title;?>"
+                data-desc="<?php echo $icon_description;?>"
+              >
+                <img class="w-100 icon--off <?php echo $count === 1 ? 'd-none' : 'd-inline';?>" src="<?php echo $icon_off;?>" alt="<?php echo $icon_title;?>">
+                <img class="w-100 icon--on <?php echo $count === 1 ? 'd-inline' : 'd-none';?>" src="<?php echo $icon_on;?>" alt="<?php echo $icon_title;?>">
+              </a>
+            </li>
+          <?php endwhile; ?>
+        </ul>
+        <?php endif; ?>
         <ul class="move-list--text">
-            <li class="move-list--text-title text-uppercase fs-3"></li>
-            <li class="move-list--text-description"></li>
+            <li class="move-list--text-title text-uppercase fs-3">
+              <?php echo $active_title;?>
+            </li>
+            <li class="move-list--text-description">
+              <?php echo $active_desc;?>
+            </li>
         </ul>
       </div>
     </div>

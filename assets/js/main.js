@@ -90,80 +90,45 @@ $(function () {
 		Single
 	------------------------------------------------------------------
     */
-  if (data) {
-    const moveList = data.move_list;
-    const themeUri = data.base_url;
 
-    const createMoveList = ({ listOfItems: list }) => {
-      const moveListIcons = $(".move-list--icons");
-      const moveListVideo = $(".move-list--video");
-      const moveListVideoEmbed = $(".move-list--video-iframe");
+  const moveListIcons = $(".move-list--icon-link");
+  const moveListVideo = $(".move-list--video");
+  const moveListVideoEmbed = $(".move-list--video-iframe");
 
-      moveListIcons.empty();
 
-      $.each(list, function (key, value) {
-        let iconUrl;
-
-        if (value.active) {
-          iconUrl = value.move_icon_on || `${themeUri}icon-${value.icon_type}-active.png`;
-          $(".move-list--text-title").text(value.title || value.name);
-          $(".move-list--text-description").text(value.description);
-
-          if ( value.video_source === "youTube") {
-            moveListVideoEmbed.attr({
-              src: "https://www.youtube.com/embed/" + value?.video_id + "?feature=oembed&enablejsapi=1&enablejsapi=1&autoplay=1&mute=1",
-            }).removeClass("d-none");
-          } else {
-            moveListVideo.attr({
-              src: value?.video_file,
-            }).removeClass("d-none");
-          }
-
-        } else {
-          iconUrl = value.move_icon_off || `${themeUri}icon-${value.icon_type}.png`;
-        }
-
-        moveListIcons.append(`
-              <li class="px-2" style="width: 20%">
-                <a href="#" class="move-list--icon-link" data-name="${
-                  value.name + "-" + key
-                }" data-type="${value.video_source}">
-                  <img class="w-100" src="${iconUrl}">
-                </a>
-              </li>
-            `);
-      });
-    };
-
-    createMoveList({ listOfItems: moveList });
-
-    $(".move-list--icons").on("click", ".move-list--icon-link", function (e) {
-      e.preventDefault();
-      const isEmbed = $(this).data("type") === "youTube";
-      const moveListVideo = $(".move-list--video");
-      const moveListFigure = $(".move-list--figure");
-
-      moveListVideo.fadeOut("fast", () => {
-        const newArray = moveList.map((item, key) =>
-          item.name + "-" + key === $(this).data("name")
-            ? { ...item, active: true }
-            : { ...item, active: false }
-        );
-        $(".move-list--icons").empty();
-        createMoveList({ listOfItems: newArray });
-      });
-
-      if (isEmbed) {
-        moveListVideo.addClass("d-none");
-        moveListFigure.removeClass("d-none");
-        moveListFigure.fadeIn('fast');
+  $.each(moveListIcons, function (key, item) {
+    if ($(this).is(".move-list--active")) {
+      if ($(this).data("type") === "youTube") {
+       moveListVideoEmbed.attr({
+         src: "https://www.youtube.com/embed/" + $(this).data("source") + "?feature=oembed&enablejsapi=1&enablejsapi=1&autoplay=1&mute=1",
+       })
       } else {
-        moveListFigure.addClass("d-none");
-        moveListVideo.removeClass("d-none");
-        moveListVideo.fadeIn('fast');
+        moveListVideo.attr({
+          src: $(this).data("source"),
+        }).removeClass("d-none");
       }
-    });
-  }
+    }
+  });
+
+  $(moveListIcons).on("click", function (e) {
+    e.preventDefault();
+    $('.icon--on').addClass('d-none');
+    $('.icon--off').removeClass('d-none');
+    $(this).find('.icon--off').addClass('d-none');
+    $(this).find('.icon--on').removeClass('d-none');
+    const { name, desc, type, source } = $(this).data();
+    $(".move-list--text-title").text(name);
+    $(".move-list--text-description").text(desc);
+    if (type === "youTube") {
+      moveListVideoEmbed.attr({
+        src: "https://www.youtube.com/embed/" + source + "?feature=oembed&enablejsapi=1&enablejsapi=1&autoplay=1&mute=1",
+      }).removeClass("d-none");
+    } else {
+      moveListVideo.attr({
+        src: source,
+      }).removeClass("d-none");
+    }
+  })
 
   $('.voice-button').on('click', function (e) {
     e.preventDefault();
